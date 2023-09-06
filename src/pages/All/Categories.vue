@@ -18,11 +18,7 @@ import arrow from '/icons/right-arrow.svg'
 				<div
 					class="overflow-hidden top-2 z-10 transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
 				>
-					<img
-						class="object-cover -rotate-3 lg:scale-150 scale-125"
-						:src="keeb"
-						alt=""
-					/>
+					<img class="object-cover" :src="keeb" alt="" />
 				</div>
 				<div
 					class="duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
@@ -46,9 +42,9 @@ import arrow from '/icons/right-arrow.svg'
 				class="group grid grid-rows-3 grid-cols-1 w-full h-full"
 			>
 				<div
-					class="overflow-hidden w-2/3 col-span-full row-start-1 row-span-2 place-self-center relative z-10 transition duration-300 group-hover:-translate-y-1"
+					class="overflow-hidden col-span-full row-start-1 row-span-2 place-self-center relative z-10 transition duration-300 group-hover:-translate-y-1"
 				>
-					<img class="object-cover" :src="keycap" alt="" />
+					<img class="object-cover scale-75" :src="keycap" alt="" />
 				</div>
 				<div
 					class="duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
@@ -74,11 +70,7 @@ import arrow from '/icons/right-arrow.svg'
 				<div
 					class="z-10 overflow-hidden transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
 				>
-					<img
-						class="object-cover aspect-auto lg:scale-110 -rotate-6"
-						:src="deskmat"
-						alt=""
-					/>
+					<img class="object-cover lg:scale-110" :src="deskmat" alt="" />
 				</div>
 				<div
 					class="duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
