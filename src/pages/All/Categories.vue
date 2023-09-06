@@ -13,10 +13,10 @@ import arrow from '/icons/right-arrow.svg'
 		>
 			<router-link
 				to="/keyboards"
-				class="group grid grid-rows-3 grid-cols-1 w-full h-full"
+				class="group grid grid-rows-3 grid-cols-1 w-full h-full gap-10"
 			>
 				<div
-					class="overflow-hidden top-2 z-10 transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
+					class="mb-4 overflow-hidden top-2 z-10 transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center"
 				>
 					<img class="object-cover" :src="keeb" alt="" />
 				</div>
@@ -39,10 +39,10 @@ import arrow from '/icons/right-arrow.svg'
 			</router-link>
 			<router-link
 				to="/keycaps"
-				class="group grid grid-rows-3 grid-cols-1 w-full h-full"
+				class="group grid grid-rows-3 grid-cols-1 w-full h-full gap-10"
 			>
 				<div
-					class="overflow-hidden col-span-full row-start-1 row-span-2 place-self-center relative z-10 transition duration-300 group-hover:-translate-y-1"
+					class="mb-4 overflow-hidden col-span-full row-start-1 row-span-2 place-self-center z-10 transition duration-300 group-hover:-translate-y-1"
 				>
 					<img class="object-cover scale-75" :src="keycap" alt="" />
 				</div>
@@ -65,10 +65,10 @@ import arrow from '/icons/right-arrow.svg'
 			</router-link>
 			<router-link
 				to="/deskmats"
-				class="group grid grid-rows-3 grid-cols-1 w-full h-full"
+				class="group grid grid-rows-3 grid-cols-1 w-full h-full gap-10"
 			>
 				<div
-					class="z-10 overflow-hidden transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
+					class="z-10 overflow-hidden transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center"
 				>
 					<img class="object-cover lg:scale-110" :src="deskmat" alt="" />
 				</div>
