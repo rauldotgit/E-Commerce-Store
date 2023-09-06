@@ -17,13 +17,15 @@ onBeforeMount(() => {
 </script>
 
 <template>
-	<div class="flex flex-col items-center w-4/5 max-w-6xl mt-32">
+	<div class="flex flex-col items-center w-4/5 max-w-6xl mt-20 lg:mt-32">
 		<h2 class="uppercase mb-16 text-black font-Manrope text-3xl font-bold">
 			You may also like
 		</h2>
-		<div class="grid grid-cols-3 grid-rows-1 gap-6">
+		<div
+			class="flex flex-col items-center lg:grid lg:grid-cols-3lg: grid-rows-1 gap-12 lg:gap-6"
+		>
 			<div
-				class="flex flex-col items-center gap-10 justify-between"
+				class="flex flex-col items-center gap-8 lg:gap-10 justify-between"
 				v-for="(item, index) in items"
 				:key="index"
 			>
@@ -34,7 +36,7 @@ onBeforeMount(() => {
 					<img class="object-center" :src="item.src" alt="" />
 				</router-link>
 				<h3 class="text-center text-black font-Manrope text-2xl font-semibold">
-					{{ item.header }} <br />
+					{{ item.header }} <br class="hidden lg:inline" />
 					<span class="capitalize"> {{ item.subheader }}</span>
 				</h3>
 				<buttonSolid

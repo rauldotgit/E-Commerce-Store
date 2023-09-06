@@ -18,10 +18,10 @@ const products = computed(() => getProductsOfType(props.category))
 	<div
 		class="flex flex-col items-center main-container w-screen h-full bg-white"
 	>
-		<header class="flex flex-col w-full items-center bg-black rounded-b-lg">
+		<header class="flex flex-col w-full items-center bg-black lg:rounded-b-lg">
 			<Navigation />
 			<div
-				class="flex flex-col justify-center items-center w-4/5 mt-20 mb-20 max-w-6xl"
+				class="flex flex-col justify-center items-center w-4/5 my-10 lg:my-20 max-w-6xl"
 			>
 				<h1
 					class="font-semibold uppercase text-white text-4xl tracking-wider antialiased"

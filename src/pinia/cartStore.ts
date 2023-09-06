@@ -13,7 +13,7 @@ interface cart {
 export const useCartStore = defineStore('cart',{
     state: () => ({
         cart: {} as cart,
-        showCart: false,
+        showCart: true,
         showQuickAdd: true,
         shipping: 50
     }),

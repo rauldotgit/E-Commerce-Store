@@ -26,26 +26,32 @@ onMounted(() => {
 <template>
 	<div
 		v-once
-		class="grid grid-cols-2 grid-rows-1 gap-20 justify-between w-4/5 max-w-6xl mt-32"
+		class="flex flex-col items-center lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-10 lg:gap-20 w-4/5 max-w-6xl mt-16 lg:mt-32"
 	>
 		<div
-			class="flex flex-col justify-center pb-6 row-start-1 col-span-1"
-			:class="flip === true ? 'col-start-1' : 'col-start-2'"
+			class="flex flex-col items-center lg:block pb-6 lg:row-start-1 lg:col-span-1"
+			:class="flip === true ? 'lg:col-start-1' : 'lg:col-start-2'"
 		>
 			<p
 				v-if="props.item.nu"
-				class="uppercase tracking-broad font-light text-black"
+				class="uppercase text-sm lg:text-md tracking-broad font-light text-black"
 			>
 				new product
 			</p>
-			<h1 class="uppercase text-6xl text-black mt-4 font-semibold">
+			<h1
+				class="uppercase text-4xl text-center lg:text-start lg:text-6xl text-black mt-4 font-semibold"
+			>
 				{{ props.item.header }} <br />
 				{{ props.item.subheader }}
 			</h1>
-			<p class="pr-20 mt-4 mb-10 text-black opacity-60">
+			<p
+				class="lg:pr-20 mt-4 mb-10 text-center lg:text-start text-black opacity-60"
+			>
 				{{ props.item.text }}
 			</p>
-			<div class="flex flex-row items-center gap-4">
+			<div
+				class="flex flex-row justify-center lg:justify-normal items-center gap-4"
+			>
 				<buttonSolid
 					:to="{ name: props.category, params: { id: props.item.id } }"
 					color="light"
@@ -59,7 +65,7 @@ onMounted(() => {
 		</div>
 		<router-link
 			:to="{ name: props.category, params: { id: props.item.id } }"
-			class="cursor-pointer active:translate-y-1 overflow-hidden col-span-1 rounded"
+			class="cursor-pointer active:translate-y-1 overflow-hidden col-span-1 rounded order-first lg:-order-none"
 			:class="flip === true ? 'col-start-2' : 'col-start-1'"
 		>
 			<img

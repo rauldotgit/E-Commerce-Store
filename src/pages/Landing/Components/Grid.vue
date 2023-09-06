@@ -9,43 +9,47 @@ import back from '/display/front.webp'
 
 <template>
 	<div
-		class="mt-12 -mb-10 lg:flex flex-col justify-center items-center w-full h-screen hidden"
+		class="mt-12 -mb-10 lg:flex flex-col justify-center items-center w-full h-[70rem]"
 	>
-		<div class="grid grid-cols-6 gap-8 h-[63rem] grid-rows-7 w-4/5 max-w-6xl">
+		<div
+			class="h-full flex flex-col justify-center items-center lg:grid lg:grid-cols-6 gap-8 lg:grid-rows-7 w-4/5 max-w-6xl"
+		>
 			<div
-				class="h-[31rem] rounded-md text-black bg-k-main row-span-3 col-span-full"
+				class="flex flex-col items-center lg:h-[31rem] rounded-md text-black bg-k-main lg:row-span-3 lg:col-span-full"
 			>
-				<div class="group grid h-full w-full grid-cols-7">
+				<div
+					class="group flex flex-col justify-center lg:grid h-full w-full lg:grid-cols-7"
+				>
 					<router-link
 						:to="{ name: 'keyboards', params: { id: 1 } }"
 						href=""
-						class="flex flex-col overflow-hidden justify-center items-center relative h-full w-full px-10 col-span-4 image"
+						class="flex flex-col overflow-hidden justify-center items-center relative h-full w-full lg:px-10 lg:col-span-4 image"
 					>
 						<img
 							:src="front"
 							alt=""
-							class="absolute scale-90 z-40 group-hover:translate-y-6 group-hover:translate-x-6 transition duration-700"
+							class="lg:absolute scale-90 z-20 group-hover:translate-y-6 group-hover:translate-x-6 transition duration-700"
 						/>
 						<img
 							:src="back"
 							alt=""
-							class="absolute z-30 group-hover:-translate-y-6 group-hover:-translate-x-6 transition duration-700"
+							class="lg:absolute z-10 group-hover:-translate-y-6 group-hover:-translate-x-6 transition duration-700"
 						/>
 						<div
-							class="transition duration-700 opacity-40 absolute group-hover:scale-110 h-[20rem] w-[20rem] border border-black rounded-full z-20"
+							class="transition duration-700 opacity-40 absolute group-hover:scale-110 h-[20rem] w-[20rem] border border-black rounded-full"
 						></div>
 						<div
-							class="transition duration-700 opacity-40 absolute group-hover:scale-110 h-[26rem] w-[26rem] border border-black rounded-full z-20"
+							class="transition duration-700 opacity-40 absolute group-hover:scale-110 h-[26rem] w-[26rem] border border-black rounded-full"
 						></div>
 						<div
-							class="transition duration-700 opacity-40 absolute group-hover:scale-90 h-[36rem] w-[36rem] border border-black rounded-full z-20"
+							class="transition duration-700 opacity-40 absolute group-hover:scale-90 h-[36rem] w-[36rem] border border-black rounded-full"
 						></div>
 						<div
-							class="transition duration-700 opacity-40 absolute group-hover:scale-125 h-[46rem] w-[46rem] border border-black rounded-full z-20"
+							class="transition duration-700 opacity-40 absolute group-hover:scale-125 h-[46rem] w-[46rem] border border-black rounded-full"
 						></div>
 					</router-link>
 					<div
-						class="h-full w-full flex flex-col justify-center px-10 col-span-3 relative z-10 pr-20"
+						class="h-full w-full flex flex-col justify-center lg:px-10 col-span-3 relative z-10 lg:pr-20"
 					>
 						<h2 class="text-6xl uppercase font-semibold">
 							ZX9 <br />

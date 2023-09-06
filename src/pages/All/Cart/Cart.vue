@@ -8,13 +8,15 @@ const cartStore = useCartStore()
 
 <template>
 	<Transition>
-		<div class="fixed w-full h-screen backdrop-blur-sm z-50">
+		<div
+			class="fixed flex flex-col items-center lg:items-start lg:block w-full h-screen backdrop-blur-sm z-50"
+		>
 			<div
 				@click="$emit('cartOff')"
-				class="relative h-screen w-full bg-black opacity-40"
+				class="absolute lg:relative h-screen w-full bg-black opacity-40"
 			></div>
 			<div
-				class="absolute w-1/3 max-w-[32rem] top-10 right-10 rounded-lg flex flex-col items-center max-h-[80%] h-fit bg-white opacity-100"
+				class="relative mt-16 lg:mt-0 lg:absolute w-11/12 lg:w-1/3 max-w-[32rem] lg:top-10 lg:right-10 rounded-lg flex flex-col items-center max-h-[80%] h-fit bg-white opacity-100"
 			>
 				<button
 					@click="$emit('cartOff')"
@@ -23,7 +25,7 @@ const cartStore = useCartStore()
 					Close
 				</button>
 				<div class="px-10 mb-8 flex flex-row justify-between items-end w-full">
-					<p class="font-Manrope text-k-black font-bold text-3xl">
+					<p class="font-Manrope text-k-black font-bold text-2xl lg:text-3xl">
 						CART ({{ cartStore.cartLength }})
 					</p>
 					<p
@@ -33,7 +35,10 @@ const cartStore = useCartStore()
 						Delete All
 					</p>
 				</div>
-				<div v-if="cartStore.isEmpty" class="text-black opacity-60 text-xl">
+				<div
+					v-if="cartStore.isEmpty"
+					class="text-black opacity-60 text-lg lg:text-xl"
+				>
 					No items in cart.
 				</div>
 				<div class="mb-10 w-full h-full flex flex-col gap-5 overflow-y-scroll">
@@ -44,7 +49,9 @@ const cartStore = useCartStore()
 					/>
 				</div>
 				<div class="px-10 mb-6 flex flex-row justify-between w-full">
-					<p class="text-black opacity-50 text-2xl font-semibold">TOTAL</p>
+					<p class="text-black opacity-50 text-xl lg:text-2xl font-semibold">
+						TOTAL
+					</p>
 					<p class="text-black text-2xl font-bold">
 						${{ cartStore.cartValue }}
 					</p>

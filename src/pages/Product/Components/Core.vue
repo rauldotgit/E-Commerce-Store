@@ -13,18 +13,26 @@ const props = defineProps<{
 
 <template>
 	<ButtonGoBack />
-	<div class="grid grid-cols-2 grid-rows-1 w-4/5 max-w-6xl">
+	<div
+		v-once
+		class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 w-4/5 max-w-6xl"
+	>
 		<div
-			class="ml-24 flex flex-col justify-center pb-6 row-span-full col-start-2 col-span-1"
+			class="lg:ml-24 flex flex-col items-center lg:items-start lg:justify-center pb-6 lg:row-span-full lg:col-start-2 lg:col-span-1"
 		>
-			<p v-if="props.item.nu" class="uppercase tracking-broad text-black">
+			<p
+				v-if="props.item.nu"
+				class="uppercase text-sm lg:text-md tracking-broad text-black"
+			>
 				new product
 			</p>
-			<h1 class="uppercase text-6xl text-black mt-4 font-semibold">
-				{{ props.item.header }} <br />
+			<h1
+				class="uppercase text-4xl text-center lg:text-start lg:text-6xl text-black mt-4 font-semibold"
+			>
+				{{ props.item.header }} <br class="hidden lg:inline" />
 				{{ props.item.subheader }}
 			</h1>
-			<p class="pr-20 mt-6 text-black opacity-60">
+			<p class="text-center lg:text-start lg:pr-20 mt-6 text-black opacity-60">
 				{{ props.item.text }}
 			</p>
 			<p class="text-xl font-bold my-8 text-black">$ {{ props.item.price }}</p>
@@ -35,7 +43,9 @@ const props = defineProps<{
 				content="add to cart"
 			/>
 		</div>
-		<div class="overflow-hidden row-span-full col-start-1 col-span-1 rounded">
+		<div
+			class="order-first lg:order-none pb-10 lg:pb-0 overflow-hidden lg:row-span-full lg:col-start-1 lg:col-span-1 rounded"
+		>
 			<img
 				loading="lazy"
 				class="object-cover relative aspect-square"
