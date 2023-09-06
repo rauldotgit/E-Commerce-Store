@@ -13,21 +13,19 @@ import mxup from '/products/keyboards/up-nobg.webp'
 	<div
 		class="flex flex-col items-center main-container w-screen h-full bg-white"
 	>
-		<header
-			class="z-0 flex flex-col w-full items-center bg-k-black rounded-b-md"
-		>
+		<header class="flex flex-col w-full items-center bg-k-black rounded-b-md">
 			<Navigation class="z-20" />
 			<div
 				class="relative flex flex-col text-center lg:text-start lg:grid lg:grid-cols-2 w-4/5 mt-20 max-w-6xl"
 			>
 				<div
-					class="z-20 flex flex-col items-center lg:items-start justify-center pb-6"
+					class="z-10 relative flex flex-col items-center lg:items-start justify-center pb-6"
 				>
 					<p class="uppercase tracking-broad lg:text-md text-sm font-light">
 						new product
 					</p>
 					<h1
-						class="uppercase text-5xl lg:text-6xl text-white mt-4 font-semibold"
+						class="relative uppercase text-5xl lg:text-6xl text-white mt-4 font-semibold"
 					>
 						xx99 mark II <br />
 						Keyboard
@@ -47,7 +45,7 @@ import mxup from '/products/keyboards/up-nobg.webp'
 					/>
 				</div>
 				<div
-					class="z-10 opacity-30 lg:opacity-100 lg:z-10 aspect-auto bottom-0 absolute lg:relative overflow-hidden"
+					class="z-0 opacity-30 lg:opacity-100 lg:z-10 aspect-auto bottom-0 absolute lg:relative overflow-hidden"
 				>
 					<img
 						class="relative scale-[175%] lg:scale-150 top-12"

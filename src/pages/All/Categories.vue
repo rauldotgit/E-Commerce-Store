@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // import speaker from '/products/speaker.svg'
-import keeb from '/display/keeb.webp'
-import keycap from '/display/keycap.webp'
-import deskmat from '/display/deskmat.webp'
+import keeb from '/products/categories/category-keyboards.webp'
+import keycap from '/products/categories/category-keycaps.webp'
+import deskmat from '/products/categories/category-deskmats.webp'
 import arrow from '/icons/right-arrow.svg'
 </script>
 
@@ -16,7 +16,7 @@ import arrow from '/icons/right-arrow.svg'
 				class="group grid grid-rows-3 grid-cols-1 w-full h-full"
 			>
 				<div
-					class="overflow-hidden top-2 z-20 transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
+					class="overflow-hidden top-2 z-10 transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
 				>
 					<img
 						class="object-cover -rotate-3 lg:scale-150 scale-125"
@@ -25,10 +25,10 @@ import arrow from '/icons/right-arrow.svg'
 					/>
 				</div>
 				<div
-					class="z-10 duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
+					class="duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
 				></div>
 				<div
-					class="z-20 col-span-full row-start-3 row-span-1 flex flex-col items-center self-end mb-5"
+					class="col-span-full row-start-3 row-span-1 flex flex-col items-center self-end mb-5"
 				>
 					<h2 class="text-center text-black text-xl font-bold uppercase">
 						Keyboards
@@ -46,15 +46,15 @@ import arrow from '/icons/right-arrow.svg'
 				class="group grid grid-rows-3 grid-cols-1 w-full h-full"
 			>
 				<div
-					class="overflow-hidden w-2/3 col-span-full row-start-1 row-span-2 place-self-center relative z-30 transition duration-300 group-hover:-translate-y-1"
+					class="overflow-hidden w-2/3 col-span-full row-start-1 row-span-2 place-self-center relative z-10 transition duration-300 group-hover:-translate-y-1"
 				>
 					<img class="object-cover" :src="keycap" alt="" />
 				</div>
 				<div
-					class="z-10 duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
+					class="duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
 				></div>
 				<div
-					class="z-20 col-span-full row-start-3 row-span-1 flex flex-col items-center self-end mb-5"
+					class="col-span-full row-start-3 row-span-1 flex flex-col items-center self-end mb-5"
 				>
 					<h2 class="text-center text-black text-xl font-bold uppercase">
 						Keycaps
@@ -72,7 +72,7 @@ import arrow from '/icons/right-arrow.svg'
 				class="group grid grid-rows-3 grid-cols-1 w-full h-full"
 			>
 				<div
-					class="z-20 overflow-hidden transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
+					class="z-10 overflow-hidden transition duration-300 group-hover:-translate-y-1 col-span-full row-start-1 row-span-2 place-self-center relative"
 				>
 					<img
 						class="object-cover aspect-auto lg:scale-110 -rotate-6"
@@ -81,10 +81,10 @@ import arrow from '/icons/right-arrow.svg'
 					/>
 				</div>
 				<div
-					class="z-10 duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
+					class="duration-300 group-hover:translate-y-1 col-span-full row-start-2 row-span-2 rounded-lg bg-k-grey"
 				></div>
 				<div
-					class="z-20 col-span-full row-start-3 row-span-1 flex flex-col items-center self-end mb-5"
+					class="col-span-full row-start-3 row-span-1 flex flex-col items-center self-end mb-5"
 				>
 					<h2 class="text-center text-black text-xl font-bold uppercase">
 						Deskmats

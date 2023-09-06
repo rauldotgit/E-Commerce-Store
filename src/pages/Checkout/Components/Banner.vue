@@ -14,12 +14,10 @@ const handleClose = () => {
 <template>
 	<Transition>
 		<div
-			class="fixed flex flex-col items-center w-screen h-screen backdrop-blur-sm z-50"
+			class="fixed flex flex-col items-center w-screen h-screen backdrop-blur-sm z-40"
 		>
-			<div class="absolute h-screen w-full bg-black opacity-40 z-10"></div>
-			<div
-				class="p-10 relative flex flex-col top-1/4 rounded-md bg-white aspect-square z-20"
-			>
+			<div class="absolute h-screen w-full bg-black opacity-40"></div>
+			<div class="p-10 flex flex-col top-1/4 rounded-md bg-white aspect-square">
 				<div
 					class="h-20 w-20 flex flex-col justify-center items-center rounded-full bg-k-main"
 				>
