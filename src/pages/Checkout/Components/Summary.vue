@@ -10,7 +10,7 @@ const formStore = useFormStore()
 
 <template>
 	<div
-		class="col-span-1 bg-white flex flex-col rounded px-10 py-12 h-fit max-h-full"
+		class="col-span-1 bg-white flex flex-col rounded px-6 lg:px-10 py-12 h-fit max-h-full"
 	>
 		<h1 class="uppercase text-black font-bold text-2xl">Summary</h1>
 		<div class="my-10 w-full h-full flex flex-col gap-5 overflow-scroll">

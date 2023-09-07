@@ -6,7 +6,7 @@ const formStore = useFormStore()
 </script>
 <template>
 	<form
-		class="h-full w-full col-span-2 bg-white rounded px-10 py-12"
+		class="h-full w-full col-span-2 bg-white rounded px-6 lg:px-10 py-12"
 		id="checkoutForm"
 	>
 		<h1 class="uppercase text-black font-bold text-3xl">Checkout</h1>
@@ -14,7 +14,9 @@ const formStore = useFormStore()
 			<p class="text-k-main font-bold uppercase tracking-wider mb-2">
 				Billing details
 			</p>
-			<div class="w-full grid grid-cols-2 gap-4">
+			<div
+				class="w-full flex flex-col items-center lg:grid lg:grid-cols-2 gap-4"
+			>
 				<textInputField
 					:showError="formStore.showErrors"
 					type="text"
@@ -25,6 +27,7 @@ const formStore = useFormStore()
 					placeholder="Alex Keebs"
 					autocomplete="off"
 					:required="true"
+					class="w-full"
 				/>
 
 				<textInputField
@@ -37,6 +40,7 @@ const formStore = useFormStore()
 					placeholder="alex@mail.com"
 					autocomplete="off"
 					:required="true"
+					class="w-full"
 				/>
 
 				<textInputField
@@ -49,6 +53,7 @@ const formStore = useFormStore()
 					placeholder="+1000-555-0136"
 					autocomplete="off"
 					:required="true"
+					class="w-full"
 				/>
 			</div>
 		</div>
@@ -57,7 +62,9 @@ const formStore = useFormStore()
 			<p class="text-k-main font-bold uppercase tracking-wider mb-2">
 				Shipping Info
 			</p>
-			<div class="w-full grid grid-cols-2 gap-4">
+			<div
+				class="w-full flex flex-col items-center lg:grid lg:grid-cols-2 gap-4"
+			>
 				<textInputField
 					:showError="formStore.showErrors"
 					type="text"
@@ -69,6 +76,7 @@ const formStore = useFormStore()
 					placeholder="1134 Willams Avenue"
 					autocomplete="off"
 					:required="true"
+					class="w-full"
 				/>
 
 				<textInputField
@@ -82,6 +90,7 @@ const formStore = useFormStore()
 					autocomplete="off"
 					max-length="5"
 					:required="true"
+					class="w-full"
 				/>
 
 				<textInputField
@@ -94,6 +103,7 @@ const formStore = useFormStore()
 					placeholder="New York"
 					autocomplete="off"
 					:required="true"
+					class="w-full"
 				/>
 
 				<textInputField
@@ -106,6 +116,7 @@ const formStore = useFormStore()
 					placeholder="United Stated"
 					autocomplete="off"
 					:required="true"
+					class="w-full"
 				/>
 			</div>
 		</div>
@@ -115,7 +126,7 @@ const formStore = useFormStore()
 				Payment Details
 			</p>
 			<p class="text-black font-bold mb-1" for="country">Payment Method</p>
-			<div class="w-full grid grid-cols-2 gap-4">
+			<div class="w-full flex flex-col lg:grid lg:grid-cols-2 gap-4">
 				<div
 					class="transition-all cursor-pointer active:translate-y-0.5 flex flex-row items-center gap-4 border border-black border-opacity-60 p-3 rounded group w-full"
 					:class="{ 'bg-k-main': !formStore.choseCash }"
@@ -139,12 +150,12 @@ const formStore = useFormStore()
 					<span class="text-black font-semibold"> Cash on Delivery </span>
 				</div>
 
-				<div class="flex flex-col col-span-2">
+				<div class="h-40 flex flex-col col-span-2">
 					<label class="text-black font-bold mb-1 mt-4" for="country"
 						>Add a comment</label
 					>
 					<textarea
-						class="text-black outline-none hover:border-k-main font-Manrope font-semibold p-3 bg-white border border-black border-opacity-60 rounded"
+						class="h-full text-black outline-none hover:border-k-main font-Manrope font-semibold p-3 bg-white border border-black border-opacity-60 rounded"
 						type=""
 						id="comment"
 						placeholder="Your request"

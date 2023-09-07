@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<div class="flex flex-row gap-4 justify-center items-center">
+	<div class="flex flex-row gap-3 lg:gap-4 justify-center items-center">
 		<div
 			ref="minusButton"
 			@click="$emit('decreaseCart')"

@@ -20,11 +20,13 @@ const cartStore = useCartStore()
 			>
 				<button
 					@click="$emit('cartOff')"
-					class="px-10 mb-4 mt-8 text-black self-start font-semibold cursor-pointer opacity-60"
+					class="px-6 lg:px-10 mb-4 mt-8 text-black self-start font-semibold cursor-pointer opacity-60"
 				>
 					Close
 				</button>
-				<div class="px-10 mb-8 flex flex-row justify-between items-end w-full">
+				<div
+					class="px-6 lg:px-10 mb-8 flex flex-row justify-between items-end w-full"
+				>
 					<p class="font-Manrope text-k-black font-bold text-2xl lg:text-3xl">
 						CART ({{ cartStore.cartLength }})
 					</p>
@@ -48,7 +50,7 @@ const cartStore = useCartStore()
 						:item-count="value.amount"
 					/>
 				</div>
-				<div class="px-10 mb-6 flex flex-row justify-between w-full">
+				<div class="px-6 lg:px-10 mb-6 flex flex-row justify-between w-full">
 					<p class="text-black opacity-50 text-xl lg:text-2xl font-semibold">
 						TOTAL
 					</p>

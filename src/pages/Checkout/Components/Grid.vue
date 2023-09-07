@@ -8,7 +8,9 @@ import checkoutSummary from './Summary.vue'
 
 <template>
 	<!-- <banner v-if="formStore.showBanner" /> -->
-	<div class="grid grid-cols-3 gap-6 h-full w-4/5 mb-24 max-w-6xl">
+	<div
+		class="flex flex-col items-center lg:grid lg:grid-cols-3 gap-4 lg:gap-6 h-full w-11/12 lg:w-4/5 lg:mb-24 max-w-6xl"
+	>
 		<!-- <div class="h-full w-full col-span-1 bg-white rounded">hi</div> -->
 		<checkoutForm />
 		<checkoutSummary />

@@ -17,9 +17,11 @@ const handleClose = () => {
 			class="fixed flex flex-col items-center w-screen h-screen backdrop-blur-sm z-40"
 		>
 			<div class="absolute h-screen w-full bg-black opacity-40"></div>
-			<div class="p-10 flex flex-col top-1/4 rounded-md bg-white aspect-square">
+			<div
+				class="p-10 m-6 lg:m-0 flex flex-col lg:top-1/4 rounded-md bg-white lg:aspect-square z-10"
+			>
 				<div
-					class="h-20 w-20 flex flex-col justify-center items-center rounded-full bg-k-main"
+					class="h-16 w-16 lg:h-20 lg:w-20 flex flex-col justify-center items-center rounded-full bg-k-main"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -44,14 +46,14 @@ const handleClose = () => {
 					You will receive an email confirmation shortly.
 				</p>
 				<div
-					class="flex flex-row rounded overflow-hidden mt-8 w-full h-fit mb-6"
+					class="flex flex-col lg:flex-row rounded-lg overflow-hidden mt-6 lg:mt-8 w-full h-fit mb-4 lg:mb-6"
 				>
 					<div
 						class="bg-k-grey flex flex-col justify-center w-full h-full px-8 py-4"
 					>
 						<div class="flex flex-row items-center w-full h-full">
 							<img
-								class="h-24 aspect-squar"
+								class="h-24 aspect-square"
 								:src="cartStore.getFirstItem.product.src"
 								alt=""
 							/>
@@ -80,11 +82,15 @@ const handleClose = () => {
 							>
 						</p>
 					</div>
-					<div class="bg-black flex flex-col justify-center w-4/5 h-full">
-						<p class="ml-10 uppercase text-lg opacity-60 tracking-wide">
+					<div
+						class="bg-black flex flex-col justify-cente p-6 lg:p-0 w-full lg:w-4/5 h-full"
+					>
+						<p
+							class="lg:ml-10 uppercase text-md lg:text-lg opacity-60 tracking-wide"
+						>
 							Grand Total
 						</p>
-						<p class="ml-10 font-semibold text-lg">
+						<p class="lg:ml-10 font-semibold text-md lg:text-lg">
 							$ {{ cartStore.getGrandTotal }}
 						</p>
 					</div>

@@ -13,7 +13,7 @@ const props = defineProps<{
 		class="mt-16 lg:mt-32 w-full h-full flex flex-col items-center bg-white"
 	>
 		<div
-			class="lg:max-h-[40rem] gap-5 w-4/5 max-w-6xl flex flex-col lg:grid lg:grid-cols-7 lg:grid-rows-2"
+			class="lg:max-h-[40rem] gap-3 lg:gap-5 w-4/5 max-w-6xl flex flex-col lg:grid lg:grid-cols-7 lg:grid-rows-2"
 		>
 			<img
 				loading="lazy"
