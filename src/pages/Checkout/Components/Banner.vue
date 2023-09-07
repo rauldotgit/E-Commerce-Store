@@ -16,12 +16,16 @@ const handleClose = () => {
 		<div
 			class="fixed flex flex-col items-center w-screen h-screen backdrop-blur-sm z-40"
 		>
-			<div class="absolute h-screen w-full bg-black opacity-40"></div>
+			<router-link
+				to="/"
+				@click="handleClose()"
+				class="absolute h-screen w-full bg-black opacity-40"
+			></router-link>
 			<div
 				class="p-10 m-6 lg:m-0 flex flex-col lg:top-1/4 rounded-md bg-white lg:aspect-square z-10"
 			>
 				<div
-					class="h-16 w-16 lg:h-20 lg:w-20 flex flex-col justify-center items-center rounded-full bg-k-main"
+					class="h-12 w-12 lg:h-20 lg:w-20 flex flex-col justify-center items-center rounded-full bg-k-main"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +33,7 @@ const handleClose = () => {
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="black"
-						class="w-14 h-14"
+						class="w-10 h-10 lg:w-14 lg:h-14"
 					>
 						<path
 							stroke-linecap="round"
@@ -38,11 +42,15 @@ const handleClose = () => {
 						/>
 					</svg>
 				</div>
-				<h2 class="uppercase text-black text-3xl font-bold mt-8">
+				<h2
+					class="uppercase text-black text-2xl lg:text-3xl font-bold mt-6 lg:mt-8"
+				>
 					thank you <br />
 					for your order
 				</h2>
-				<p class="text-black font-semibold opacity-60 text-lg mt-6">
+				<p
+					class="text-black font-semibold opacity-60 text-md lg:text-lg mt-4 lg:mt-6"
+				>
 					You will receive an email confirmation shortly.
 				</p>
 				<div
