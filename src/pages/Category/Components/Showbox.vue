@@ -70,7 +70,7 @@ onMounted(() => {
 		>
 			<img
 				loading="lazy"
-				class="h-full object-cover relative aspect-square"
+				class="w-full object-cover relative aspect-square"
 				:src="props.item.src"
 				alt=""
 			/>

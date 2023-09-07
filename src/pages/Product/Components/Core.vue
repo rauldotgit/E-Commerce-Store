@@ -14,7 +14,6 @@ const props = defineProps<{
 <template>
 	<ButtonGoBack />
 	<div
-		v-once
 		class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 w-4/5 max-w-6xl"
 	>
 		<div
