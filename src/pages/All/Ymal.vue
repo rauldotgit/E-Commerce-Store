@@ -22,7 +22,7 @@ onBeforeMount(() => {
 			You may also like
 		</h2>
 		<div
-			class="flex flex-col items-center lg:grid lg:grid-cols-3lg: grid-rows-1 gap-12 lg:gap-6"
+			class="flex flex-col items-center lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-12 lg:gap-6"
 		>
 			<div
 				class="flex flex-col items-center gap-8 lg:gap-10 justify-between"
