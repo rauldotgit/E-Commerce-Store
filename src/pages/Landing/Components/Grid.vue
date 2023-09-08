@@ -9,7 +9,7 @@ import back from '/display/front.webp'
 
 <template>
 	<div
-		class="mt-12 -mb-10 lg:flex flex-col justify-center items-center w-full h-[70rem]"
+		class="mt-20 lg:mt-32 -mb-10 lg:flex flex-col justify-center items-center w-full h-full lg:h-[70rem]"
 	>
 		<div
 			class="h-full flex flex-col justify-center items-center lg:grid lg:grid-cols-6 gap-8 lg:grid-rows-7 w-4/5 max-w-6xl"
