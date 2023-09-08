@@ -49,6 +49,11 @@ const routes = [
 			path: '/checkout', 
 			component: ()=>import('../pages/Checkout/Checkout.vue'),
 		},
+		{
+			path: '/:patchMatch(.*)',
+			name: 'notFound',
+			component:()=>import('../pages/404.vue')
+		},
 	]
 
 const Router = createRouter({
