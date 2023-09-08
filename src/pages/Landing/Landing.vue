@@ -7,20 +7,16 @@ import Footer from '../All/Footer.vue'
 import Info from '../All/Info.vue'
 import Grid from './Components/Grid.vue'
 import mxup from '/products/keyboards/up-nobg.webp'
-
-import { useCartStore } from '../../pinia/cartStore'
-const cartStore = useCartStore()
 </script>
 
 <template>
 	<div
 		class="flex flex-col items-center main-container w-screen h-full bg-white"
-		:class="cartStore.isCartShown && 'touch-none'"
 	>
 		<header class="flex flex-col w-full items-center bg-k-black rounded-b-md">
 			<Navigation class="z-20" />
 			<div
-				class="relative flex flex-col text-center lg:text-start lg:grid lg:grid-cols-2 w-4/5 mt-20 max-w-6xl"
+				class="relative flex flex-col text-center lg:text-start lg:grid lg:grid-cols-2 w-4/5 mt-20 max-w-6xl transition-transform duration-200"
 			>
 				<div
 					class="z-10 relative flex flex-col items-center lg:items-start justify-center pb-6"

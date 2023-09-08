@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import cart from '/icons/cart-icon.svg'
 import Cart from './Cart/Cart.vue'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useCartStore } from '../../pinia/cartStore.ts'
 
 interface Props {
@@ -17,6 +17,16 @@ const cartStore = useCartStore()
 let style = computed(() => {
 	return 'bg-' + props.color
 })
+
+const hamburgerState = ref('hide')
+
+function showHamburger(): void {
+	hamburgerState.value = 'show'
+}
+
+function hideHamburger(): void {
+	hamburgerState.value = 'hide'
+}
 </script>
 
 <template>
@@ -30,7 +40,11 @@ let style = computed(() => {
 			class="relative flex flex-row items-center justify-between w-4/5 max-w-6xl py-6"
 			:class="props.color === 'transparent' && 'border-b border-zinc-500'"
 		>
-			<button id="hamburger" class="select-none lg:hidden">
+			<button
+				id="hamburger"
+				class="select-none lg:hidden"
+				@click="showHamburger()"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -96,5 +110,47 @@ let style = computed(() => {
 			@cart-on="cartStore.cartOn"
 			@cart-off="cartStore.cartOff"
 		/>
+		<transition>
+			<nav
+				class="absolute flex flex-row justify-around w-full gap-2 p-9 tracking-widest text-xs font-semibold bg-black"
+				v-if="hamburgerState === 'show'"
+				:class="$route.path === '/' ? 'bg-k-black' : 'bg-black'"
+			>
+				<p
+					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					@click="hideHamburger()"
+				>
+					Close
+				</p>
+				<router-link
+					to="/"
+					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					:class="$route.path === '/' && 'hidden'"
+					@click="hideHamburger()"
+					>Home
+				</router-link>
+				<router-link
+					to="/keyboards"
+					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					:class="$route.path === '/keyboards' && 'hidden'"
+					@click="hideHamburger()"
+					>Keyboards
+				</router-link>
+				<router-link
+					to="/keycaps"
+					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					:class="$route.path === '/keycaps' && 'hidden'"
+					@click="hideHamburger()"
+					>Keycaps
+				</router-link>
+				<router-link
+					to="/deskmats"
+					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					:class="$route.path === '/deskmats' && 'hidden'"
+					@click="hideHamburger()"
+					>Deskmats
+				</router-link>
+			</nav>
+		</transition>
 	</div>
 </template>
