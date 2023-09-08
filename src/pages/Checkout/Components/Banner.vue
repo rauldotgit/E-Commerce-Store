@@ -2,6 +2,7 @@
 import buttonSolid from '../../All/Buttons/button-solid.vue'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 import { useFormStore } from '../../../pinia/formStore'
+import { onBeforeMount } from 'vue'
 
 const cartStore = useCartStore()
 const formStore = useFormStore()
@@ -10,6 +11,14 @@ const handleClose = () => {
 	cartStore.clearCart()
 	formStore.bannerOff()
 }
+
+onBeforeMount(() => {
+	if (formStore.showBanner) {
+		document.body.classList.add('overflow-y-hidden')
+	} else {
+		document.body.classList.remove('overflow-y-hidden')
+	}
+})
 </script>
 <template>
 	<Transition>

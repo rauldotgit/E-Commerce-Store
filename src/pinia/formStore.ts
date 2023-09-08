@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 
 export const useFormStore = defineStore('form',{
     state: () => ({
-        bannerState: 'show',
+        bannerState: 'hide',
         name: '',
         email: '',
         phone: '',

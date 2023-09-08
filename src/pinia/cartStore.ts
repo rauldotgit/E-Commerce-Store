@@ -104,6 +104,9 @@ export const useCartStore = defineStore('cart',{
         },
         getGrandTotal(_: any){
             return (this.cartValue + this.shipping).toFixed(2)
+        },
+        isCartShown(state: any){
+            return state.showCart === true ? true : false
         }
     }
 })
