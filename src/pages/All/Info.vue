@@ -13,7 +13,7 @@ import switches from '/display/switch-array.webp'
 				class="text-center lg:text-start flex flex-col justify-center items-center h-full lg:w-4/5"
 			>
 				<h3 class="uppercase text-4xl lg:text-5xl text-k-black font-semibold">
-					Bringing you the <br class="hidden lg:block" />
+					Bringing you the <br class="hidden xl:inline" />
 					<span class="text-k-main">best</span> keyboards
 				</h3>
 				<p class="text-black opacity-70 mt-10 lg:mt-6 tracking-wide">

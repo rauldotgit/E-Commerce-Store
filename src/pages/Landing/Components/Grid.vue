@@ -9,7 +9,7 @@ import back from '/display/cow-back-new.webp'
 
 <template>
 	<div
-		class="mt-20 lg:mt-32 lg:-mb-10 flex flex-col items-center w-full h-full lg:h-[70rem]"
+		class="mt-20 lg:-mb-10 flex flex-col items-center w-full h-full lg:h-[70rem]"
 	>
 		<div
 			class="w-11/12 lg:w-4/5 h-full flex flex-col items-center lg:grid lg:grid-cols-6 gap-4 lg:gap-8 lg:grid-rows-7 max-w-6xl"
@@ -74,7 +74,7 @@ import back from '/display/cow-back-new.webp'
 				</div>
 			</div>
 			<div
-				class="order-3 lg:order-none w-full lg:h-[16rem] flex flex-col justify-center items-center lg:items-start p-6 lg:px-6 gap-6 rounded-md text-black bg-k-grey lg:bg-white lg:row-span-2 lg:col-span-2"
+				class="order-3 lg:order-none w-full lg:h-full flex flex-col justify-center items-center lg:items-start p-6 lg:px-6 gap-6 rounded-md text-black bg-k-grey lg:bg-white lg:row-span-2 lg:col-span-2"
 			>
 				<h2 class="text-3xl uppercase font-semibold">Kraken deskmat</h2>
 				<buttonEmpty
@@ -84,7 +84,7 @@ import back from '/display/cow-back-new.webp'
 			</div>
 			<router-link
 				:to="{ name: 'deskmats', params: { id: 1 } }"
-				class="order-2 lg:order-none h-64 flex flex-col justify-center items-center lg:block lg:h-[16rem] overflow-hidden rounded-md text-black bg-k-grey lg:row-span-2 lg:col-span-4"
+				class="order-2 lg:order-none h-64 flex flex-col justify-center items-center lg:block lg:h-full overflow-hidden rounded-md text-black bg-k-grey lg:row-span-2 lg:col-span-4"
 			>
 				<img
 					class="object-cover duration-200 grayscale scale-150"
@@ -93,7 +93,7 @@ import back from '/display/cow-back-new.webp'
 				/>
 			</router-link>
 			<div
-				class="order-4 lg:order-none lg:h-[16rem] overflow-hidden rounded-md text-black bg-k-grey row-span-2 col-span-3"
+				class="order-4 lg:order-none lg:h-full overflow-hidden rounded-md text-black bg-k-grey row-span-2 col-span-3"
 			>
 				<img class="object-cover scale-150" :src="keycaps" alt="" />
 			</div>
