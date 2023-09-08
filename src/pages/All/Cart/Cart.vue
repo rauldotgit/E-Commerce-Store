@@ -16,7 +16,7 @@ const cartStore = useCartStore()
 				class="absolute lg:relative h-screen w-full bg-black opacity-40"
 			></div>
 			<div
-				class="relative mt-16 lg:mt-0 lg:absolute w-11/12 lg:w-1/3 max-w-[32rem] lg:top-10 lg:right-10 rounded-lg flex flex-col items-center max-h-[80%] h-fit bg-white opacity-100"
+				class="relative mt-16 lg:mt-0 lg:absolute w-11/12 lg:w-1/3 max-w-[32rem] lg:top-10 lg:right-10 rounded-lg flex flex-col items-center max-h-[80%] h-full bg-white opacity-100"
 			>
 				<button
 					@click="$emit('cartOff')"
