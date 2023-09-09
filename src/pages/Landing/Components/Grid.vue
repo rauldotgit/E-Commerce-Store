@@ -98,7 +98,7 @@ import back from '/display/cow-back-new.webp'
 				<img class="object-cover scale-150" :src="keycaps" alt="" />
 			</div>
 			<div
-				class="order-5 lg:order-none w-full lg:h-[16rem] flex flex-col justify-center items-center lg:items-start p-6 lg:px-16 gap-6 rounded-md text-black bg-k-grey row-span-2 col-span-3"
+				class="order-5 lg:order-none w-full  lg:h-full flex flex-col justify-center items-center lg:items-start p-6 lg:px-16 gap-6 rounded-md text-black bg-k-grey row-span-2 col-span-3"
 			>
 				<h2 class="text-3xl uppercase font-semibold">Keycaps</h2>
 				<buttonEmpty :to="{ path: 'keycaps' }" content="see all" />

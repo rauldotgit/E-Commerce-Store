@@ -40,7 +40,7 @@ const cartStore = useCartStore()
 					</p>
 				</div>
 				<div
-					v-if="cartStore.isEmpty"
+					v-if="cartStore.cartLength === 0"
 					class="text-black opacity-60 text-lg lg:text-xl"
 				>
 					No items in cart.
@@ -61,7 +61,7 @@ const cartStore = useCartStore()
 					</p>
 				</div>
 				<buttonSolid
-					v-if="!cartStore.isEmpty"
+					v-if="!(cartStore.cartLength === 0)"
 					to="/checkout"
 					class="mb-10"
 					add="font-bold"

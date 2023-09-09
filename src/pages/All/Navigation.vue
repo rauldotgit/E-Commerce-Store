@@ -34,6 +34,7 @@ function hideHamburger(): void {
 		id="navi"
 		class="flex flex-col items-center main-container w-screen h-full"
 		:class="style"
+		data-test="nav-desktop"
 	>
 		<div
 			v-once
@@ -44,6 +45,7 @@ function hideHamburger(): void {
 				id="hamburger"
 				class="select-none lg:hidden"
 				@click="showHamburger()"
+				data-test="hamburger"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +65,7 @@ function hideHamburger(): void {
 			<router-link
 				to="/"
 				class="transition duration-300 hover:text-k-main hover:scale-110 font-extrabold text-3xl tracking-tight antialiased"
+				data-test="nav-logo"
 			>
 				KIIIBS
 			</router-link>
@@ -89,7 +92,7 @@ function hideHamburger(): void {
 					>Deskmats
 				</router-link>
 			</nav>
-			<div class="cursor-pointer h-5 relative" @click="cartStore.cartOn()">
+			<div class="cursor-pointer h-5 relative" @click="cartStore.cartOn()" data-test="cart">
 				<img
 					class="hover:opacity-50 active:translate-y-0.5 h-full"
 					:src="cart"
@@ -97,7 +100,7 @@ function hideHamburger(): void {
 				/>
 				<Transition>
 					<div
-						v-if="!cartStore.isEmpty"
+						v-if="cartStore.cartLength !== 0"
 						class="bg-red-600 transition-all duration-300 rounded-full h-4 w-4 text-xs font-black flex flex-col justify-center items-center absolute -right-2 top-3"
 					>
 						{{ cartStore.cartLength }}
@@ -113,13 +116,15 @@ function hideHamburger(): void {
 				class="absolute flex flex-row justify-around w-screen gap-2 p-9 tracking-widest text-xs font-semibold bg-black"
 				v-if="hamburgerState === 'show'"
 				:class="$route.path === '/' ? 'bg-k-black' : 'bg-black'"
+				data-test="nav-mobile"
 			>
-				<p
+				<button
 					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
 					@click="hideHamburger()"
+					data-test="close-hamburger"
 				>
 					Close
-				</p>
+				</button>
 				<router-link
 					to="/"
 					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"

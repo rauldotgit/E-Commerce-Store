@@ -87,7 +87,7 @@ export const useCartStore = defineStore('cart',{
             return ressi
         },
         isEmpty(state: any){
-            return Object.keys(state.cart).length == 0 ? true: false
+            return Object.keys(state.cart).length < 1 ? true: false
         },
         getItemAmountByKey(state: any){
             return (productKey: string) => {state.cart[productKey].amount}
