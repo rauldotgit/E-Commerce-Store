@@ -3,23 +3,25 @@ import buttonSolid from '../Buttons/button-solid.vue'
 import cartItem from './Item.vue'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 
-const cartStore = useCartStore()
-</script>
 
+const cartStore = useCartStore()
+
+</script>
+ 
 <template>
 	<Transition>
 		<div
 			class="fixed flex flex-col items-center lg:items-start lg:block w-full h-screen backdrop-blur-sm z-50"
 		>
 			<div
-				@click="$emit('cartOff')"
+				@click="cartStore.cartOff()"
 				class="absolute lg:relative h-screen w-full bg-black opacity-40"
 			></div>
 			<div
 				class="relative mt-16 lg:mt-0 lg:absolute w-11/12 lg:w-1/3 max-w-[32rem] lg:top-10 lg:right-10 rounded-lg flex flex-col items-center max-h-[80%] h-full bg-white opacity-100"
 			>
 				<button
-					@click="$emit('cartOff')"
+					@click="cartStore.cartOff()"
 					class="px-6 lg:px-10 mb-4 mt-8 text-black self-start font-semibold cursor-pointer opacity-60"
 				>
 					Close

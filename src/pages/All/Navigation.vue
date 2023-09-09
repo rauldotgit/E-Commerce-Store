@@ -89,7 +89,7 @@ function hideHamburger(): void {
 					>Deskmats
 				</router-link>
 			</nav>
-			<div @click="cartStore.cartOn" class="cursor-pointer h-5 relative">
+			<div class="cursor-pointer h-5 relative" @click="cartStore.cartOn()">
 				<img
 					class="hover:opacity-50 active:translate-y-0.5 h-full"
 					:src="cart"
@@ -107,12 +107,10 @@ function hideHamburger(): void {
 		</div>
 		<Cart
 			v-show="cartStore.showCart"
-			@cart-on="cartStore.cartOn"
-			@cart-off="cartStore.cartOff"
 		/>
 		<transition>
 			<nav
-				class="absolute flex flex-row justify-around w-full gap-2 p-9 tracking-widest text-xs font-semibold bg-black"
+				class="absolute flex flex-row justify-around w-screen gap-2 p-9 tracking-widest text-xs font-semibold bg-black"
 				v-if="hamburgerState === 'show'"
 				:class="$route.path === '/' ? 'bg-k-black' : 'bg-black'"
 			>

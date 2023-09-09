@@ -2,7 +2,7 @@
 import buttonSolid from '../../All/Buttons/button-solid.vue'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 import { useFormStore } from '../../../pinia/formStore'
-import { onBeforeMount } from 'vue'
+import { onBeforeMount, onBeforeUnmount } from 'vue'
 
 const cartStore = useCartStore()
 const formStore = useFormStore()
@@ -15,9 +15,11 @@ const handleClose = () => {
 onBeforeMount(() => {
 	if (formStore.showBanner) {
 		document.body.classList.add('overflow-y-hidden')
-	} else {
-		document.body.classList.remove('overflow-y-hidden')
 	}
+})
+
+onBeforeUnmount(() => {
+	document.body.classList.remove('overflow-y-hidden')
 })
 </script>
 <template>
@@ -31,7 +33,7 @@ onBeforeMount(() => {
 				class="absolute h-screen w-full bg-black opacity-40"
 			></router-link>
 			<div
-				class="p-10 m-6 lg:m-0 flex flex-col lg:top-1/4 rounded-md bg-white lg:aspect-square z-10"
+				class="p-10 m-6 lg:m-0 lg:mt-20 flex flex-col lg:top-1/4 rounded-md bg-white lg:aspect-square z-10"
 			>
 				<div
 					class="h-12 w-12 lg:h-20 lg:w-20 flex flex-col justify-center items-center rounded-full bg-k-main"
@@ -100,7 +102,7 @@ onBeforeMount(() => {
 						</p>
 					</div>
 					<div
-						class="bg-black flex flex-col justify-cente p-6 lg:p-0 w-full lg:w-4/5 h-full"
+						class="bg-black flex flex-col justify-center p-6 lg:p-0 w-full lg:w-4/5 h-full"
 					>
 						<p
 							class="lg:ml-10 uppercase text-md lg:text-lg opacity-60 tracking-wide"

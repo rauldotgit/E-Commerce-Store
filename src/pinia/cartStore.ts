@@ -20,10 +20,12 @@ export const useCartStore = defineStore('cart',{
     actions: {
         cartOn(){
 	        this.showCart = true
+            document.body.classList.add('overflow-y-hidden')
         },
 
         cartOff(){
             this.showCart = false
+            document.body.classList.remove('overflow-y-hidden')
         },
 
         addToCart(item: product){
