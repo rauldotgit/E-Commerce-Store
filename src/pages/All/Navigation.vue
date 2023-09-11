@@ -37,7 +37,6 @@ function hideHamburger(): void {
 		data-test="nav-desktop"
 	>
 		<div
-			v-once
 			class="relative flex flex-row items-center justify-between w-4/5 max-w-6xl py-6"
 			:class="props.color === 'transparent' && 'border-b border-zinc-500'"
 		>
@@ -74,25 +73,29 @@ function hideHamburger(): void {
 				<router-link
 					to="/"
 					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					data-test="nav-home"
 					>Home
 				</router-link>
 				<router-link
 					to="/keyboards"
 					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					data-test="nav-keyboards"
 					>Keyboards
 				</router-link>
 				<router-link
 					to="/keycaps"
 					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					data-test="nav-keycaps"
 					>Keycaps
 				</router-link>
 				<router-link
 					to="/deskmats"
 					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					data-test="nav-deskmats"
 					>Deskmats
 				</router-link>
 			</nav>
-			<div class="cursor-pointer h-5 relative" @click="cartStore.cartOn()" data-test="cart">
+			<div class="cursor-pointer h-5 relative" @click="cartStore.cartOn()" data-test="cart-button">
 				<img
 					class="hover:opacity-50 active:translate-y-0.5 h-full"
 					:src="cart"
@@ -100,8 +103,9 @@ function hideHamburger(): void {
 				/>
 				<Transition>
 					<div
-						v-if="cartStore.cartLength !== 0"
+						v-show="cartStore.cartLength !== 0"
 						class="bg-red-600 transition-all duration-300 rounded-full h-4 w-4 text-xs font-black flex flex-col justify-center items-center absolute -right-2 top-3"
+						data-test="cart-bubble"
 					>
 						{{ cartStore.cartLength }}
 					</div>

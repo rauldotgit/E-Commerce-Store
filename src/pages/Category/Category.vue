@@ -34,6 +34,7 @@ const products = computed(() => getProductsOfType(props.category))
 			v-for="product in products"
 			:item="product"
 			:category="props.category"
+			:data-test="`showbox-${product.category}-${product.id}`"
 		/>
 		<Categories />
 		<Info />

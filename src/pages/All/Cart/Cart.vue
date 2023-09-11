@@ -12,6 +12,7 @@ const cartStore = useCartStore()
 	<Transition>
 		<div
 			class="fixed flex flex-col items-center lg:items-start lg:block w-full h-screen backdrop-blur-sm z-50"
+			data-test="cart-banner"
 		>
 			<div
 				@click="cartStore.cartOff()"
@@ -23,6 +24,7 @@ const cartStore = useCartStore()
 				<button
 					@click="cartStore.cartOff()"
 					class="px-6 lg:px-10 mb-4 mt-8 text-black self-start font-semibold cursor-pointer opacity-60"
+					data-test="cart-close-button"
 				>
 					Close
 				</button>
@@ -35,6 +37,7 @@ const cartStore = useCartStore()
 					<p
 						@click="cartStore.clearCart()"
 						class="transition text-k-dark-grey underline opacity-70 cursor-pointer hover:opacity-100 active:translate-y-0.5"
+						data-test="cart-delete-all"
 					>
 						Delete All
 					</p>

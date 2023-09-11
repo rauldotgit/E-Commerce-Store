@@ -25,7 +25,6 @@ onMounted(() => {
 
 <template>
 	<div
-		v-once
 		class="flex flex-col items-center lg:grid lg:grid-cols-2 lg:grid-rows-1 gap-10 lg:gap-20 w-4/5 max-w-6xl mt-16 lg:mt-32"
 	>
 		<div
@@ -60,6 +59,7 @@ onMounted(() => {
 				<buttonQuickAdd
 					v-if="cartStore.showQuickAdd"
 					@add-to-cart="cartStore.addToCart(props.item)"
+					:data-test="`quick-add-${props.item.category}-${props.item.id}`"
 				/>
 			</div>
 		</div>
