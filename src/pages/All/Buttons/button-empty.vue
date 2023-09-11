@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
 	<router-link :to="props.to">
 		<button
-			class="hover:shadow-md active:translate-y-1 tracking-wide transition duration-100 hover:translate-y-0.5 w-52 text-k-black border-2 border-k-black font-bold uppercase px-10 py-3"
+			class="w-52 border-2 border-k-black px-10 py-3 font-bold uppercase tracking-wide text-k-black transition duration-100 hover:translate-y-0.5 hover:shadow-md active:translate-y-1"
 			:class="props.add"
 		>
 			{{ props.content }}

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import cart from '/icons/cart-icon.svg'
-import Cart from './Cart/Cart.vue'
+import Cart from './Cart/cart-modal.vue'
 import { computed, ref } from 'vue'
 import { useCartStore } from '../../pinia/cartStore.ts'
 
@@ -32,12 +32,12 @@ function hideHamburger(): void {
 <template>
 	<div
 		id="navi"
-		class="flex flex-col items-center main-container w-screen h-full"
+		class="main-container flex h-full w-screen flex-col items-center"
 		:class="style"
 		data-test="nav-desktop"
 	>
 		<div
-			class="relative flex flex-row items-center justify-between w-4/5 max-w-6xl py-6"
+			class="relative flex w-4/5 max-w-6xl flex-row items-center justify-between py-6"
 			:class="props.color === 'transparent' && 'border-b border-zinc-500'"
 		>
 			<button
@@ -52,7 +52,7 @@ function hideHamburger(): void {
 					viewBox="0 0 24 24"
 					stroke-width="2"
 					stroke="currentColor"
-					class="w-8 h-8"
+					class="h-8 w-8"
 				>
 					<path
 						stroke-linecap="round"
@@ -63,48 +63,52 @@ function hideHamburger(): void {
 			</button>
 			<router-link
 				to="/"
-				class="transition duration-300 hover:text-k-main hover:scale-110 font-extrabold text-3xl tracking-tight antialiased"
+				class="text-3xl font-extrabold tracking-tight antialiased transition duration-300 hover:scale-110 hover:text-k-main"
 				data-test="nav-logo"
 			>
 				KIIIBS
 			</router-link>
 
-			<nav class="lg:flex lg:gap-8 tracking-widest hidden">
+			<nav class="hidden tracking-widest lg:flex lg:gap-8">
 				<router-link
 					to="/"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					data-test="nav-home"
 					>Home
 				</router-link>
 				<router-link
 					to="/keyboards"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					data-test="nav-keyboards"
 					>Keyboards
 				</router-link>
 				<router-link
 					to="/keycaps"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					data-test="nav-keycaps"
 					>Keycaps
 				</router-link>
 				<router-link
 					to="/deskmats"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					data-test="nav-deskmats"
 					>Deskmats
 				</router-link>
 			</nav>
-			<div class="cursor-pointer h-5 relative" @click="cartStore.cartOn()" data-test="cart-button">
+			<div
+				class="relative h-5 cursor-pointer"
+				@click="cartStore.cartOn()"
+				data-test="cart-button"
+			>
 				<img
-					class="hover:opacity-50 active:translate-y-0.5 h-full"
+					class="h-full hover:opacity-50 active:translate-y-0.5"
 					:src="cart"
 					alt=""
 				/>
 				<Transition>
 					<div
 						v-show="cartStore.cartLength !== 0"
-						class="bg-red-600 transition-all duration-300 rounded-full h-4 w-4 text-xs font-black flex flex-col justify-center items-center absolute -right-2 top-3"
+						class="absolute -right-2 top-3 flex h-4 w-4 flex-col items-center justify-center rounded-full bg-red-600 text-xs font-black transition-all duration-300"
 						data-test="cart-bubble"
 					>
 						{{ cartStore.cartLength }}
@@ -112,18 +116,16 @@ function hideHamburger(): void {
 				</Transition>
 			</div>
 		</div>
-		<Cart
-			v-show="cartStore.showCart"
-		/>
+		<Cart v-show="cartStore.showCart" />
 		<transition>
 			<nav
-				class="absolute flex flex-row justify-around w-screen gap-2 p-9 tracking-widest text-xs font-semibold bg-black"
+				class="absolute flex w-screen flex-row justify-around gap-2 bg-black p-9 text-xs font-semibold tracking-widest"
 				v-if="hamburgerState === 'show'"
 				:class="$route.path === '/' ? 'bg-k-black' : 'bg-black'"
 				data-test="nav-mobile"
 			>
 				<button
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					@click="hideHamburger()"
 					data-test="close-hamburger"
 				>
@@ -131,28 +133,28 @@ function hideHamburger(): void {
 				</button>
 				<router-link
 					to="/"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					:class="$route.path === '/' && 'hidden'"
 					@click="hideHamburger()"
 					>Home
 				</router-link>
 				<router-link
 					to="/keyboards"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					:class="$route.path === '/keyboards' && 'hidden'"
 					@click="hideHamburger()"
 					>Keyboards
 				</router-link>
 				<router-link
 					to="/keycaps"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					:class="$route.path === '/keycaps' && 'hidden'"
 					@click="hideHamburger()"
 					>Keycaps
 				</router-link>
 				<router-link
 					to="/deskmats"
-					class="transition duration-300 active:translate-y-0.5 hover:text-k-main uppercase text-white"
+					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
 					:class="$route.path === '/deskmats' && 'hidden'"
 					@click="hideHamburger()"
 					>Deskmats

@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
 	<router-link class="w-fit" :to="props.to">
 		<button
-			class="shadow-md tracking-wide transition duration-100 rounded-sm text-k-black border-2 uppercase hover:translate-y-0.5 active:translate-y-1"
+			class="rounded-sm border-2 uppercase tracking-wide text-k-black shadow-md transition duration-100 hover:translate-y-0.5 active:translate-y-1"
 			:class="[
 				props.color === 'light'
 					? [

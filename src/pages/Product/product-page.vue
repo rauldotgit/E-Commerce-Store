@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import Navigation from '../All/Navigation.vue'
-import Core from './Components/Core.vue'
-import Ymal from '../All/Ymal.vue'
-import Grid from './Components/Grid.vue'
+import Navigation from '../All/navigation-global.vue'
+import Core from './Components/product-core.vue'
+import Ymal from '../All/ymal-boxes.vue'
+import Grid from './Components/product-image-grid.vue'
 // import Categories from '../All/Categories.vue'
-import Info from '../All/Info.vue'
-import Footer from '../All/Footer.vue'
+import Info from '../All/info-section.vue'
+import Footer from '../All/footer-global.vue'
 
 import { getProduct } from '../../data/products.ts'
 import { computed } from 'vue'
-import Features from './Components/Features.vue'
+import Features from './Components/product-features.vue'
 
 const props = defineProps<{
 	category: string
@@ -22,7 +22,7 @@ let item = computed(() => {
 </script>
 
 <template>
-	<div class="flex flex-col items-center w-screen h-full bg-white">
+	<div class="flex h-full w-screen flex-col items-center bg-white">
 		<Navigation color="black" />
 		<!-- <h1 class="text-6xl text-black">{{ props.productId }}</h1> -->
 		<Core :item="item!" />

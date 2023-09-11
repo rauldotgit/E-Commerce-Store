@@ -14,19 +14,19 @@ const props = defineProps<{
 <template>
 	<div
 		v-if="itemCount > 0"
-		class="px-6 lg:px-10 flex flex-row justify-between gap-12 items-center w-full"
+		class="flex w-full flex-row items-center justify-between gap-12 px-6 lg:px-10"
 	>
-		<div class="flex flex-row gap-6 w-full h-full">
+		<div class="flex h-full w-full flex-row gap-6">
 			<img
-				class="aspect-square w-20 lg:w-24 rounded-lg object-cover shadow-md"
+				class="aspect-square w-20 rounded-lg object-cover shadow-md lg:w-24"
 				:src="props.cartItem.src"
 				alt=""
 			/>
 			<div class="flex flex-col justify-center">
-				<p class="text-k-black font-bold text-lg lg:text-xl">
+				<p class="text-lg font-bold text-k-black lg:text-xl">
 					{{ props.cartItem.header }}
 				</p>
-				<p class="text-k-black opacity-80 font-bold text-sm lg:text-md">
+				<p class="lg:text-md text-sm font-bold text-k-black opacity-80">
 					$ {{ props.cartItem.price }}
 				</p>
 			</div>

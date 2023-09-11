@@ -14,27 +14,27 @@ const props = defineProps<{
 <template>
 	<ButtonGoBack />
 	<div
-		class="flex flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1 w-4/5 max-w-6xl"
+		class="flex w-4/5 max-w-6xl flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1"
 	>
 		<div
-			class="lg:ml-24 flex flex-col items-center lg:items-start lg:justify-center pb-6 lg:row-span-full lg:col-start-2 lg:col-span-1"
+			class="flex flex-col items-center pb-6 lg:col-span-1 lg:col-start-2 lg:row-span-full lg:ml-24 lg:items-start lg:justify-center"
 		>
 			<p
 				v-if="props.item.nu"
-				class="uppercase text-sm lg:text-md tracking-broad text-black"
+				class="lg:text-md text-sm uppercase tracking-broad text-black"
 			>
 				new product
 			</p>
 			<h1
-				class="uppercase text-4xl text-center lg:text-start lg:text-6xl text-black mt-4 font-semibold"
+				class="mt-4 text-center text-4xl font-semibold uppercase text-black lg:text-start lg:text-6xl"
 			>
 				{{ props.item.header }} <br class="hidden lg:inline" />
 				{{ props.item.subheader }}
 			</h1>
-			<p class="text-center lg:text-start lg:pr-20 mt-6 text-black opacity-60">
+			<p class="mt-6 text-center text-black opacity-60 lg:pr-20 lg:text-start">
 				{{ props.item.text }}
 			</p>
-			<p class="text-xl font-bold my-8 text-black">$ {{ props.item.price }}</p>
+			<p class="my-8 text-xl font-bold text-black">$ {{ props.item.price }}</p>
 			<buttonSolid
 				@click="cartStore.addToCart(props.item)"
 				color="light"
@@ -43,11 +43,11 @@ const props = defineProps<{
 			/>
 		</div>
 		<div
-			class="order-first lg:order-none pb-10 lg:pb-0 overflow-hidden lg:row-span-full lg:col-start-1 lg:col-span-1 rounded"
+			class="order-first overflow-hidden rounded pb-10 lg:order-none lg:col-span-1 lg:col-start-1 lg:row-span-full lg:pb-0"
 		>
 			<img
 				loading="lazy"
-				class="object-cover relative aspect-square"
+				class="relative aspect-square object-cover"
 				:src="props.item.src"
 				alt=""
 			/>

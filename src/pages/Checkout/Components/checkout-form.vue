@@ -1,26 +1,25 @@
 <script setup lang="ts">
 import { useFormStore } from '../../../pinia/formStore'
-import textInputField from './textInputField.vue'
+import textInputField from './text-input-field.vue'
 
 const formStore = useFormStore()
 </script>
 <template>
 	<form
-		class="h-full w-full col-span-2 bg-white rounded px-6 lg:px-10 py-12"
+		class="col-span-2 h-full w-full rounded bg-white px-6 py-12 lg:px-10"
 		id="checkoutForm"
 	>
-		<h1 class="uppercase text-black font-bold text-3xl">Checkout</h1>
+		<h1 class="text-3xl font-bold uppercase text-black">Checkout</h1>
 		<div class="mt-10">
-			<p class="text-k-main font-bold uppercase tracking-wider mb-2">
+			<p class="mb-2 font-bold uppercase tracking-wider text-k-main">
 				Billing details
 			</p>
 			<div
-				class="w-full flex flex-col items-center lg:grid lg:grid-cols-2 gap-4"
+				class="flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-2"
 			>
 				<textInputField
 					:showError="formStore.showErrors"
 					type="text"
-					:formData="formStore"
 					:validator="formStore.isValidName"
 					id="name"
 					label="Name"
@@ -33,7 +32,6 @@ const formStore = useFormStore()
 				<textInputField
 					:showError="formStore.showErrors"
 					type="email"
-					:formData="formStore"
 					:validator="formStore.isValidEmail"
 					id="email"
 					label="Email Address"
@@ -46,7 +44,6 @@ const formStore = useFormStore()
 				<textInputField
 					:showError="formStore.showErrors"
 					type="tel"
-					:formData="formStore"
 					:validator="formStore.isValidPhone"
 					id="phone"
 					label="Phone Number"
@@ -59,16 +56,15 @@ const formStore = useFormStore()
 		</div>
 
 		<div class="mt-10">
-			<p class="text-k-main font-bold uppercase tracking-wider mb-2">
+			<p class="mb-2 font-bold uppercase tracking-wider text-k-main">
 				Shipping Info
 			</p>
 			<div
-				class="w-full flex flex-col items-center lg:grid lg:grid-cols-2 gap-4"
+				class="flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-2"
 			>
 				<textInputField
 					:showError="formStore.showErrors"
 					type="text"
-					:formData="formStore"
 					:validator="formStore.isValidAddress"
 					id="address"
 					label="Address"
@@ -82,7 +78,6 @@ const formStore = useFormStore()
 				<textInputField
 					:showError="formStore.showErrors"
 					type="text"
-					:formData="formStore"
 					:validator="formStore.isValidZip"
 					id="zip"
 					label="Zip Code"
@@ -96,7 +91,6 @@ const formStore = useFormStore()
 				<textInputField
 					:showError="formStore.showErrors"
 					type="text"
-					:formData="formStore"
 					:validator="formStore.isValidCity"
 					id="city"
 					label="City"
@@ -109,7 +103,6 @@ const formStore = useFormStore()
 				<textInputField
 					:showError="formStore.showErrors"
 					type="text"
-					:formData="formStore"
 					:validator="formStore.isValidCountry"
 					id="country"
 					label="Country"
@@ -122,40 +115,40 @@ const formStore = useFormStore()
 		</div>
 
 		<div class="mt-10">
-			<p class="text-k-main font-bold uppercase tracking-wider mb-2">
+			<p class="mb-2 font-bold uppercase tracking-wider text-k-main">
 				Payment Details
 			</p>
-			<p class="text-black font-bold mb-1" for="country">Payment Method</p>
-			<div class="w-full flex flex-col lg:grid lg:grid-cols-2 gap-4">
+			<p class="mb-1 font-bold text-black" for="country">Payment Method</p>
+			<div class="flex w-full flex-col gap-4 lg:grid lg:grid-cols-2">
 				<div
-					class="transition-all cursor-pointer active:translate-y-0.5 flex flex-row items-center gap-4 border border-black border-opacity-60 p-3 rounded group w-full"
+					class="group flex w-full cursor-pointer flex-row items-center gap-4 rounded border border-black border-opacity-60 p-3 transition-all active:translate-y-0.5"
 					:class="{ 'bg-k-main': !formStore.choseCash }"
 					@click="formStore.setElectronic()"
 				>
 					<div
-						class="border border-black border-opacity-60 rounded-full h-3 aspect-square"
+						class="aspect-square h-3 rounded-full border border-black border-opacity-60"
 						:class="{ 'bg-black': !formStore.choseCash }"
 					></div>
-					<span class="text-black font-semibold"> e-Money </span>
+					<span class="font-semibold text-black"> e-Money </span>
 				</div>
 				<div
-					class="transition-all cursor-pointer active:translate-y-0.5 flex flex-row items-center gap-4 border border-black border-opacity-60 p-3 rounded group w-full"
+					class="group flex w-full cursor-pointer flex-row items-center gap-4 rounded border border-black border-opacity-60 p-3 transition-all active:translate-y-0.5"
 					:class="{ 'bg-k-main': formStore.choseCash }"
 					@click="formStore.setCash()"
 				>
 					<div
-						class="border border-black border-opacity-60 rounded-full h-3 aspect-square"
+						class="aspect-square h-3 rounded-full border border-black border-opacity-60"
 						:class="{ 'bg-black': formStore.choseCash }"
 					></div>
-					<span class="text-black font-semibold"> Cash on Delivery </span>
+					<span class="font-semibold text-black"> Cash on Delivery </span>
 				</div>
 
-				<div class="h-40 flex flex-col col-span-2">
-					<label class="text-black font-bold mb-1 mt-4" for="country"
+				<div class="col-span-2 flex h-40 flex-col">
+					<label class="mb-1 mt-4 font-bold text-black" for="country"
 						>Add a comment</label
 					>
 					<textarea
-						class="h-full text-black outline-none hover:border-k-main font-Manrope font-semibold p-3 bg-white border border-black border-opacity-60 rounded"
+						class="h-full rounded border border-black border-opacity-60 bg-white p-3 font-Manrope font-semibold text-black outline-none hover:border-k-main"
 						type=""
 						id="comment"
 						placeholder="Your request"

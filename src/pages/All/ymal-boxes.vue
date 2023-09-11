@@ -17,25 +17,25 @@ onBeforeMount(() => {
 </script>
 
 <template>
-	<div class="flex flex-col items-center w-4/5 max-w-6xl mt-20 lg:mt-32">
-		<h2 class="uppercase mb-16 text-black font-Manrope text-3xl font-bold">
+	<div class="mt-20 flex w-4/5 max-w-6xl flex-col items-center lg:mt-32">
+		<h2 class="mb-16 font-Manrope text-3xl font-bold uppercase text-black">
 			You may also like
 		</h2>
 		<div
-			class="flex flex-col items-center lg:grid lg:grid-cols-3 lg:grid-rows-1 gap-12 lg:gap-6"
+			class="flex flex-col items-center gap-12 lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:gap-6"
 		>
 			<div
-				class="flex flex-col items-center gap-8 lg:gap-10 justify-between"
+				class="flex flex-col items-center justify-between gap-8 lg:gap-10"
 				v-for="(item, index) in items"
 				:key="index"
 			>
 				<router-link
 					:to="{ name: item.category, params: { id: item.id } }"
-					class="rounded overflow-hidden"
+					class="overflow-hidden rounded"
 				>
 					<img class="object-center" :src="item.src" alt="" />
 				</router-link>
-				<h3 class="text-center text-black font-Manrope text-2xl font-semibold">
+				<h3 class="text-center font-Manrope text-2xl font-semibold text-black">
 					{{ item.header }} <br class="hidden lg:inline" />
 					<span class="capitalize"> {{ item.subheader }}</span>
 				</h3>

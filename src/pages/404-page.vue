@@ -4,12 +4,12 @@ import buttonSolid from './All/Buttons/button-solid.vue'
 
 <template>
 	<div
-		class="bg-black text-white flex flex-col justify-center items-center w-screen h-screen"
+		class="flex h-screen w-screen flex-col items-center justify-center bg-black text-white"
 	>
 		<div
-			class="flex flex-col items-center justify-center text-center max-h-screen p-10 lg:w-1/3 gap-6"
+			class="flex max-h-screen flex-col items-center justify-center gap-6 p-10 text-center lg:w-1/3"
 		>
-			<h1 class="text-k-main text-7xl font-black">404</h1>
+			<h1 class="text-7xl font-black text-k-main">404</h1>
 			<p class="text-md tracking-widest opacity-70">
 				Stare at the abyss and the abyss stares back at you!
 			</p>
