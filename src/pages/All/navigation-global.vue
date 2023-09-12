@@ -136,6 +136,7 @@ function hideHamburger(): void {
 					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/' && 'hidden'"
 					@click="hideHamburger()"
+					data-test="mobile-nav-home"
 					>Home
 				</router-link>
 				<router-link
@@ -143,6 +144,7 @@ function hideHamburger(): void {
 					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/keyboards' && 'hidden'"
 					@click="hideHamburger()"
+					data-test="mobile-nav-keyboards"
 					>Keyboards
 				</router-link>
 				<router-link
@@ -150,6 +152,7 @@ function hideHamburger(): void {
 					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/keycaps' && 'hidden'"
 					@click="hideHamburger()"
+					data-test="mobile-nav-keycaps"
 					>Keycaps
 				</router-link>
 				<router-link
@@ -157,6 +160,7 @@ function hideHamburger(): void {
 					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/deskmats' && 'hidden'"
 					@click="hideHamburger()"
+					data-test="mobile-nav-deskmats"
 					>Deskmats
 				</router-link>
 			</nav>

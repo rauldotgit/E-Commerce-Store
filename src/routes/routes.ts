@@ -1,5 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {
+	NavigationGuardNext,
+	RouteLocationNormalized,
+	createRouter,
+	createWebHistory,
+} from 'vue-router'
+import { getProduct } from '../data/products.ts'
 import Home from '../pages/Landing/landing-page.vue'
+
+function parseRouteId(id: string | string[]): number {
+	if (Array.isArray(id)) return parseInt(id[0])
+	return parseInt(id)
+}
 // separate routes, as we change these often
 const routes = [
 	{ path: '/', name: 'Home', component: Home },
@@ -17,6 +28,17 @@ const routes = [
 			category: 'keyboards',
 			productId: parseInt(route.params.id),
 		}),
+		beforeEnter: (
+			to: RouteLocationNormalized,
+			_2: RouteLocationNormalized,
+			next: NavigationGuardNext,
+		) => {
+			if (!getProduct('keyboards', parseRouteId(to.params.id))) {
+				next('/404')
+			} else {
+				next()
+			}
+		},
 	},
 	{
 		path: '/keycaps',
@@ -32,6 +54,17 @@ const routes = [
 			category: 'keycaps',
 			productId: parseInt(route.params.id),
 		}),
+		beforeEnter: (
+			to: RouteLocationNormalized,
+			_2: RouteLocationNormalized,
+			next: NavigationGuardNext,
+		) => {
+			if (!getProduct('keyboards', parseRouteId(to.params.id))) {
+				next('/404')
+			} else {
+				next()
+			}
+		},
 	},
 	{
 		path: '/deskmats',
@@ -47,14 +80,29 @@ const routes = [
 			category: 'deskmats',
 			productId: parseInt(route.params.id),
 		}),
+		beforeEnter: (
+			to: RouteLocationNormalized,
+			_2: RouteLocationNormalized,
+			next: NavigationGuardNext,
+		) => {
+			if (!getProduct('keyboards', parseRouteId(to.params.id))) {
+				next('/404')
+			} else {
+				next()
+			}
+		},
 	},
 	{
 		path: '/checkout',
 		component: () => import('../pages/Checkout/checkout-page.vue'),
 	},
 	{
-		path: '/:patchMatch(.*)',
+		path: '/404',
 		name: 'notFound',
+		component: () => import('../pages/404-page.vue'),
+	},
+	{
+		path: '/:patchMatch(.*)',
 		component: () => import('../pages/404-page.vue'),
 	},
 ]
