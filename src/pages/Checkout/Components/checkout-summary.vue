@@ -14,7 +14,9 @@ const formStore = useFormStore()
 		data-test="checkout-summary"
 	>
 		<h1 class="text-2xl font-bold uppercase text-black">Summary</h1>
-		<div class="my-10 flex h-full w-full flex-col gap-5 overflow-scroll">
+		<div
+			class="my-10 flex h-full w-full flex-col gap-5 overflow-x-hidden overflow-y-scroll"
+		>
 			<item
 				v-for="(value, _, index) in cartStore.cart"
 				:cart-item="value.product"

@@ -10,24 +10,27 @@ const props = defineProps<{
 <template>
 	<div
 		v-if="itemCount > 0"
-		class="flex w-full flex-row items-center justify-between gap-12"
+		class="flex h-full w-full flex-row items-center justify-start gap-3"
 	>
-		<div class="flex h-full flex-row gap-4">
+		<div class="basis-1/4 justify-self-start overflow-hidden rounded-lg">
 			<img
-				class="aspect-square w-1/3 rounded-lg object-cover shadow-md"
+				class="aspect-square h-fit w-fit object-cover shadow-md"
 				:src="props.cartItem.src"
 				alt=""
 			/>
-			<div class="flex flex-col justify-center">
-				<p class="text-lg font-bold text-k-black">
-					{{ props.cartItem.header }}
-				</p>
-				<p class="text-md font-bold text-k-black opacity-80">
-					$ {{ props.cartItem.price }}
-				</p>
-			</div>
 		</div>
-		<div class="h-full text-lg font-bold text-black opacity-50">
+		<div class="flex basis-2/4 flex-col items-start">
+			<p class="text-start text-lg font-bold text-k-black">
+				{{ props.cartItem.header }}
+			</p>
+			<p class="text-md text-start font-bold text-k-black opacity-80">
+				$ {{ props.cartItem.price }}
+			</p>
+		</div>
+
+		<div
+			class="ml-auto justify-self-end text-lg font-bold text-black opacity-50"
+		>
 			x{{ props.itemCount }}
 		</div>
 	</div>
