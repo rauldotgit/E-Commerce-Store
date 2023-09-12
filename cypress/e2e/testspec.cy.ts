@@ -1,9 +1,9 @@
 describe('template spec', () => {
-  beforeEach(()=>{
-    cy.viewport("macbook-15")
-  })
+	beforeEach(() => {
+		cy.viewport('macbook-15')
+	})
 
-  it('passes', () => {
-    cy.visit('http://localhost:5173')
-  })
+	it('passes', () => {
+		cy.visit('http://localhost:5173')
+	})
 })

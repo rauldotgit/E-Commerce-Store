@@ -70,6 +70,7 @@ const cartStore = useCartStore()
 					color="light"
 					content="Checkout"
 					@click="cartStore.cartOff"
+					data-test="cart-checkout-button"
 				/>
 			</div>
 		</div>

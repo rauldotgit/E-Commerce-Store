@@ -6,10 +6,10 @@ import instagram from '/icons/instagram.svg'
 
 <template>
 	<div
-		class="relative mt-20 flex h-full w-screen flex-col items-center bg-black lg:mt-40"
+		class="relative mt-20 flex h-full w-screen flex-col items-center bg-black md:mt-32 lg:mt-40"
 	>
 		<div
-			class="flex w-screen flex-row justify-center lg:w-4/5 lg:max-w-6xl lg:justify-start"
+			class="flex w-4/5 flex-row justify-center md:w-11/12 md:max-w-6xl md:justify-start lg:w-4/5"
 		>
 			<div
 				id="colorStrip"
@@ -18,19 +18,19 @@ import instagram from '/icons/instagram.svg'
 		</div>
 		<div
 			id="container"
-			class="my-10 flex h-full w-4/5 max-w-6xl flex-col justify-center"
+			class="my-10 flex h-full w-4/5 max-w-6xl flex-col justify-center md:w-11/12 lg:w-4/5"
 		>
 			<div
 				id="titleNav"
-				class="mb-10 flex flex-col items-center justify-between lg:flex-row"
+				class="mb-10 flex flex-col items-center justify-between md:flex-row"
 			>
 				<h3
-					class="mb-8 cursor-pointer text-4xl font-bold text-white subpixel-antialiased transition duration-300 hover:scale-110 hover:text-k-main lg:mb-0 lg:text-3xl"
+					class="mb-8 cursor-pointer text-4xl font-bold text-white subpixel-antialiased transition duration-300 hover:scale-110 hover:text-k-main md:mb-0 md:text-3xl"
 				>
 					KIIIBS
 				</h3>
 				<nav
-					class="flex flex-col items-center justify-between gap-6 lg:flex-row lg:items-start lg:gap-10"
+					class="flex flex-col items-center justify-between gap-6 md:flex-row md:items-start md:gap-10"
 				>
 					<router-link
 						class="font-semibold uppercase tracking-wider text-white transition duration-300 hover:text-k-main"
@@ -56,17 +56,17 @@ import instagram from '/icons/instagram.svg'
 			</div>
 			<div
 				id="textSocials"
-				class="flex flex-col items-center justify-between lg:flex-row lg:items-start"
+				class="flex flex-col items-center justify-between md:flex-row md:items-start"
 			>
 				<p
-					class="mb-10 text-center tracking-wide opacity-70 lg:mb-0 lg:w-1/2 lg:text-left"
+					class="mb-10 text-center tracking-wide opacity-70 md:mb-0 md:w-2/3 md:text-left"
 				>
 					KIIIBS is an all in one stop to fulfill your mechanical keyboard
 					needs. We're a small team of coding lovers and typing specialists who
 					are devoted to helping you get the most out of you setup. Come and
 					visit our demo facility - we're open 7 days a week.
 				</p>
-				<nav class="flex flex-row gap-4 lg:self-end">
+				<nav class="flex flex-row gap-4 md:self-end">
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
 						<img class="aspect-square h-6" :src="facebook" alt="" />
 					</a>
@@ -79,7 +79,7 @@ import instagram from '/icons/instagram.svg'
 				</nav>
 			</div>
 			<p
-				class="mt-16 text-center text-sm font-semibold tracking-wide text-white opacity-60 lg:text-start"
+				class="mt-16 text-center text-sm font-semibold tracking-wide text-white opacity-60 md:text-start"
 			>
 				Copyright 2023. All Rights Reserved
 			</p>

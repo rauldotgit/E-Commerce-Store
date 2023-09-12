@@ -37,7 +37,7 @@ function hideHamburger(): void {
 		data-test="nav-desktop"
 	>
 		<div
-			class="relative flex w-4/5 max-w-6xl flex-row items-center justify-between py-6"
+			class="relative flex w-4/5 max-w-6xl flex-row items-center justify-between py-6 md:w-11/12 lg:w-4/5"
 			:class="props.color === 'transparent' && 'border-b border-zinc-500'"
 		>
 			<button
@@ -125,7 +125,7 @@ function hideHamburger(): void {
 				data-test="nav-mobile"
 			>
 				<button
-					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
+					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					@click="hideHamburger()"
 					data-test="close-hamburger"
 				>
@@ -133,28 +133,28 @@ function hideHamburger(): void {
 				</button>
 				<router-link
 					to="/"
-					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
+					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/' && 'hidden'"
 					@click="hideHamburger()"
 					>Home
 				</router-link>
 				<router-link
 					to="/keyboards"
-					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
+					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/keyboards' && 'hidden'"
 					@click="hideHamburger()"
 					>Keyboards
 				</router-link>
 				<router-link
 					to="/keycaps"
-					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
+					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/keycaps' && 'hidden'"
 					@click="hideHamburger()"
 					>Keycaps
 				</router-link>
 				<router-link
 					to="/deskmats"
-					class="uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5"
+					class="lg:text-md uppercase text-white transition duration-300 hover:text-k-main active:translate-y-0.5 md:text-lg"
 					:class="$route.path === '/deskmats' && 'hidden'"
 					@click="hideHamburger()"
 					>Deskmats

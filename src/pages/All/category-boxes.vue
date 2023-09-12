@@ -7,18 +7,20 @@ import arrow from '/icons/right-arrow.svg'
 </script>
 
 <template>
-	<div class="mt-16 flex h-full w-full flex-col items-center bg-white lg:mt-32">
+	<div
+		class="mt-16 flex h-full w-full flex-col items-center bg-white md:mt-24 lg:mt-32"
+	>
 		<div
-			class="grid h-screen w-4/5 grid-cols-1 grid-rows-3 gap-2 lg:flex lg:h-[17rem] lg:max-w-6xl lg:flex-row lg:justify-center lg:gap-6"
+			class="grid h-screen w-4/5 grid-cols-1 grid-rows-3 gap-2 md:flex md:h-[17rem] md:w-11/12 md:max-w-6xl md:flex-row md:justify-center md:gap-6 lg:w-4/5"
 		>
 			<router-link
 				to="/keyboards"
-				class="group grid h-full w-full grid-cols-1 grid-rows-3 lg:gap-0"
+				class="group grid h-full w-full grid-cols-1 grid-rows-3 md:gap-0"
 			>
 				<div
-					class="top-2 z-10 col-span-full row-span-2 row-start-1 place-self-center overflow-hidden transition duration-300 group-hover:-translate-y-1 lg:mb-0"
+					class="top-2 z-10 col-span-full row-span-2 row-start-1 place-self-center overflow-hidden transition duration-300 group-hover:-translate-y-1 md:mb-0"
 				>
-					<img class="object-cover" :src="keeb" alt="" />
+					<img class="object-cover" :src="keeb" alt="keyboard category image" />
 				</div>
 				<div
 					class="col-span-full row-span-2 row-start-2 rounded-lg bg-k-grey duration-300 group-hover:translate-y-1"
@@ -39,13 +41,13 @@ import arrow from '/icons/right-arrow.svg'
 			</router-link>
 			<router-link
 				to="/keycaps"
-				class="group grid h-full w-full grid-cols-1 grid-rows-3 lg:gap-0"
+				class="group grid h-full w-full grid-cols-1 grid-rows-3 md:gap-0"
 			>
 				<div
-					class="z-10 col-span-full row-span-2 row-start-1 place-self-center overflow-hidden transition duration-300 group-hover:-translate-y-1 lg:mb-0"
+					class="z-10 col-span-full row-span-2 row-start-1 place-self-center overflow-hidden transition duration-300 group-hover:-translate-y-1 md:mb-0"
 				>
 					<img
-						class="scale-75 object-cover lg:scale-100"
+						class="scale-75 object-cover md:scale-100"
 						:src="keycap"
 						alt=""
 					/>
@@ -69,12 +71,12 @@ import arrow from '/icons/right-arrow.svg'
 			</router-link>
 			<router-link
 				to="/deskmats"
-				class="group grid h-full w-full grid-cols-1 grid-rows-3 lg:gap-0"
+				class="group grid h-full w-full grid-cols-1 grid-rows-3 md:gap-0"
 			>
 				<div
 					class="z-10 col-span-full row-span-2 row-start-1 -mb-2 place-self-center overflow-hidden transition duration-300 group-hover:-translate-y-1"
 				>
-					<img class="object-cover lg:scale-110" :src="deskmat" alt="" />
+					<img class="object-cover md:scale-110" :src="deskmat" alt="" />
 				</div>
 				<div
 					class="col-span-full row-span-2 row-start-2 rounded-lg bg-k-grey duration-300 group-hover:translate-y-1"

@@ -26,6 +26,7 @@ onBeforeUnmount(() => {
 	<Transition>
 		<div
 			class="fixed z-40 flex h-screen w-screen flex-col items-center backdrop-blur-sm"
+			data-test="checkout-success-modal"
 		>
 			<router-link
 				to="/"
@@ -120,6 +121,7 @@ onBeforeUnmount(() => {
 					color="light"
 					content="back to home"
 					class="mt-6 self-center font-bold"
+					data-test="checkout-success-modal-button"
 				/>
 			</div>
 		</div>

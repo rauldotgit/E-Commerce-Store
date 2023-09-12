@@ -18,39 +18,35 @@ const formStore = useFormStore()
 				class="flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-2"
 			>
 				<textInputField
-					:showError="formStore.showErrors"
 					type="text"
 					:validator="formStore.isValidName"
 					id="name"
 					label="Name"
 					placeholder="Alex Keebs"
+					error-message="Characters only."
 					autocomplete="off"
 					:required="true"
-					class="w-full"
 				/>
 
 				<textInputField
-					:showError="formStore.showErrors"
 					type="email"
 					:validator="formStore.isValidEmail"
 					id="email"
 					label="Email Address"
 					placeholder="alex@mail.com"
+					error-message="Must be a valid email address."
 					autocomplete="off"
 					:required="true"
-					class="w-full"
 				/>
 
 				<textInputField
-					:showError="formStore.showErrors"
 					type="tel"
 					:validator="formStore.isValidPhone"
 					id="phone"
 					label="Phone Number"
 					placeholder="+1000-555-0136"
+					error-message="Numbers and '+-' only."
 					autocomplete="off"
-					:required="true"
-					class="w-full"
 				/>
 			</div>
 		</div>
@@ -63,53 +59,49 @@ const formStore = useFormStore()
 				class="flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-2"
 			>
 				<textInputField
-					:showError="formStore.showErrors"
 					type="text"
 					:validator="formStore.isValidAddress"
 					id="address"
 					label="Address"
 					container-class="col-span-2"
 					placeholder="1134 Willams Avenue"
+					error-message="Only characters and ',-/. allowed."
 					autocomplete="off"
 					:required="true"
-					class="w-full"
 				/>
 
 				<textInputField
-					:showError="formStore.showErrors"
 					type="text"
 					:validator="formStore.isValidZip"
 					id="zip"
 					label="Zip Code"
 					placeholder="10001"
+					error-message="Only 5 digit numbers allowed."
 					autocomplete="off"
 					max-length="5"
 					:required="true"
-					class="w-full"
 				/>
 
 				<textInputField
-					:showError="formStore.showErrors"
 					type="text"
 					:validator="formStore.isValidCity"
 					id="city"
 					label="City"
 					placeholder="New York"
+					error-message="Must contain non-special characters."
 					autocomplete="off"
 					:required="true"
-					class="w-full"
 				/>
 
 				<textInputField
-					:showError="formStore.showErrors"
 					type="text"
 					:validator="formStore.isValidCountry"
 					id="country"
 					label="Country"
 					placeholder="United Stated"
+					error-message="Must contain non-special characters."
 					autocomplete="off"
 					:required="true"
-					class="w-full"
 				/>
 			</div>
 		</div>
@@ -120,28 +112,30 @@ const formStore = useFormStore()
 			</p>
 			<p class="mb-1 font-bold text-black" for="country">Payment Method</p>
 			<div class="flex w-full flex-col gap-4 lg:grid lg:grid-cols-2">
-				<div
+				<button
 					class="group flex w-full cursor-pointer flex-row items-center gap-4 rounded border border-black border-opacity-60 p-3 transition-all active:translate-y-0.5"
 					:class="{ 'bg-k-main': !formStore.choseCash }"
-					@click="formStore.setElectronic()"
+					@click="formStore.setElectronic($event)"
+					data-test="form-button-emoney"
 				>
 					<div
 						class="aspect-square h-3 rounded-full border border-black border-opacity-60"
 						:class="{ 'bg-black': !formStore.choseCash }"
 					></div>
 					<span class="font-semibold text-black"> e-Money </span>
-				</div>
-				<div
+				</button>
+				<button
 					class="group flex w-full cursor-pointer flex-row items-center gap-4 rounded border border-black border-opacity-60 p-3 transition-all active:translate-y-0.5"
 					:class="{ 'bg-k-main': formStore.choseCash }"
-					@click="formStore.setCash()"
+					@click="formStore.setCash($event)"
+					data-test="form-button-cash"
 				>
 					<div
 						class="aspect-square h-3 rounded-full border border-black border-opacity-60"
 						:class="{ 'bg-black': formStore.choseCash }"
 					></div>
 					<span class="font-semibold text-black"> Cash on Delivery </span>
-				</div>
+				</button>
 
 				<div class="col-span-2 flex h-40 flex-col">
 					<label class="mb-1 mt-4 font-bold text-black" for="country"
@@ -154,6 +148,7 @@ const formStore = useFormStore()
 						placeholder="Your request"
 						v-model="formStore.comment"
 						required
+						data-test="form-text-area"
 					/>
 				</div>
 			</div>

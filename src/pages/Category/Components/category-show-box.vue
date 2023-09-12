@@ -25,31 +25,31 @@ onMounted(() => {
 
 <template>
 	<div
-		class="mt-16 flex w-4/5 max-w-6xl flex-col items-center gap-10 lg:mt-32 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-20"
+		class="mt-16 flex w-4/5 max-w-6xl flex-col items-center gap-10 md:mt-32 md:grid md:w-11/12 md:grid-cols-2 md:grid-rows-1 md:gap-10 lg:w-4/5 lg:gap-20"
 	>
 		<div
-			class="flex flex-col items-center pb-6 lg:col-span-1 lg:row-start-1 lg:block"
-			:class="flip === true ? 'lg:col-start-1' : 'lg:col-start-2'"
+			class="flex flex-col items-center md:col-span-1 md:row-start-1 md:block lg:pb-6"
+			:class="flip === true ? 'md:col-start-1' : 'md:col-start-2'"
 		>
 			<p
 				v-if="props.item.nu"
-				class="lg:text-md text-sm font-light uppercase tracking-broad text-black"
+				class="md:text-md text-sm font-light uppercase tracking-broad text-black"
 			>
 				new product
 			</p>
 			<h1
-				class="mt-4 text-center text-4xl font-semibold uppercase text-black lg:text-start lg:text-6xl"
+				class="mt-4 text-center text-4xl font-semibold uppercase text-black md:text-start md:text-5xl lg:text-6xl"
 			>
-				{{ props.item.header }} <br />
+				{{ props.item.header }} <br class="hidden md:block" />
 				{{ props.item.subheader }}
 			</h1>
 			<p
-				class="mb-10 mt-4 text-center text-black opacity-60 lg:pr-20 lg:text-start"
+				class="mb-10 mt-4 text-center text-black opacity-60 md:pr-20 md:text-start"
 			>
 				{{ props.item.text }}
 			</p>
 			<div
-				class="flex flex-row items-center justify-center gap-4 lg:justify-normal"
+				class="flex flex-row items-center justify-center gap-4 md:justify-normal"
 			>
 				<buttonSolid
 					:to="{ name: props.category, params: { id: props.item.id } }"
@@ -65,7 +65,7 @@ onMounted(() => {
 		</div>
 		<router-link
 			:to="{ name: props.category, params: { id: props.item.id } }"
-			class="order-first col-span-1 cursor-pointer overflow-hidden rounded active:translate-y-1 lg:-order-none"
+			class="order-first col-span-1 cursor-pointer overflow-hidden rounded active:translate-y-1 md:-order-none"
 			:class="flip === true ? 'col-start-2' : 'col-start-1'"
 		>
 			<img

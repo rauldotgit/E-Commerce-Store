@@ -10,7 +10,8 @@ const formStore = useFormStore()
 
 <template>
 	<div
-		class="col-span-1 flex h-fit max-h-full flex-col rounded bg-white px-6 py-12 lg:self-start lg:px-10"
+		class="col-span-1 flex h-fit max-h-full w-full flex-col rounded bg-white px-6 py-12 lg:self-start lg:px-10"
+		data-test="checkout-summary"
 	>
 		<h1 class="text-2xl font-bold uppercase text-black">Summary</h1>
 		<div class="my-10 flex h-full w-full flex-col gap-5 overflow-scroll">
@@ -31,7 +32,15 @@ const formStore = useFormStore()
 			<p class="font-semibold tracking-wide text-black text-opacity-60">
 				SHIPPING
 			</p>
-			<p class="text-lg font-bold text-black">${{ cartStore.shipping }}</p>
+			<p
+				class="text-lg font-bold text-black"
+				:class="
+					cartStore.cartValue > cartStore.freeShippingThreshold &&
+					'line-through'
+				"
+			>
+				${{ cartStore.shipping }}
+			</p>
 		</div>
 		<div class="flex flex-row justify-between">
 			<p class="font-semibold tracking-wide text-black text-opacity-60">
@@ -48,6 +57,7 @@ const formStore = useFormStore()
 			color="light"
 			class="mt-8 self-center font-bold"
 			@click="formStore.submit()"
+			data-test="checkout-button"
 		/>
 	</div>
 </template>
