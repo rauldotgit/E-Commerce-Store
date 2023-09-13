@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Navigation from '../All/navigation-global.vue'
-import Categories from '../All/category-boxes.vue'
+import categoryBoxes from '../All/category-box-container.vue'
 import Info from '../All/info-section.vue'
 import Footer from '../All/footer-global.vue'
 import Showbox from './Components/category-show-box.vue'
@@ -37,7 +37,7 @@ const products = computed(() => getProductsOfType(props.category))
 			:data-test="`showbox-${product.category}-${product.id}`"
 			:key="index"
 		/>
-		<Categories />
+		<categoryBoxes />
 		<Info />
 		<Footer />
 	</div>

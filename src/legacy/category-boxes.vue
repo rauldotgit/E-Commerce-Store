@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// import speaker from '/products/speaker.svg'
 import keeb from '/products/categories/category-keyboards.webp'
 import keycap from '/products/categories/category-keycaps.webp'
 import deskmat from '/products/categories/category-deskmats.webp'
@@ -11,7 +10,7 @@ import arrow from '/icons/right-arrow.svg'
 		class="mt-16 flex h-full w-full flex-col items-center bg-white md:mt-24 lg:mt-32"
 	>
 		<div
-			class="grid h-screen w-4/5 grid-cols-1 grid-rows-3 gap-2 md:flex md:h-[17rem] md:w-11/12 md:max-w-6xl md:flex-row md:justify-center md:gap-6 lg:w-4/5"
+			class="grid h-screen w-4/5 grid-cols-1 grid-rows-3 gap-2 md:flex md:w-11/12 md:max-w-6xl md:flex-row md:justify-center md:gap-6 lg:w-4/5"
 		>
 			<router-link
 				to="/keyboards"
