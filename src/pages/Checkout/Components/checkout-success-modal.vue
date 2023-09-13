@@ -25,7 +25,7 @@ onBeforeUnmount(() => {
 <template>
 	<Transition>
 		<div
-			class="fixed z-40 flex h-screen w-screen flex-col items-center backdrop-blur-sm"
+			class="fixed z-40 flex h-full w-full flex-col items-center backdrop-blur-sm"
 			data-test="checkout-success-modal"
 		>
 			<router-link
@@ -34,10 +34,10 @@ onBeforeUnmount(() => {
 				class="absolute h-screen w-full bg-black opacity-40"
 			></router-link>
 			<div
-				class="z-10 m-6 flex flex-col rounded-md bg-white p-10 lg:top-1/4 lg:m-0 lg:mt-20 lg:aspect-square"
+				class="relative z-10 mx-4 mt-6 flex flex-col rounded-md bg-white p-10 md:mt-20 md:p-12"
 			>
 				<div
-					class="flex h-12 w-12 flex-col items-center justify-center rounded-full bg-k-main lg:h-20 lg:w-20"
+					class="absolute right-10 flex h-10 w-10 flex-shrink-0 flex-row items-center justify-center rounded-full bg-k-main md:static lg:h-20 lg:w-20"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ onBeforeUnmount(() => {
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="black"
-						class="h-10 w-10 lg:h-14 lg:w-14"
+						class="h-8 w-8 lg:h-14 lg:w-14"
 					>
 						<path
 							stroke-linecap="round"
@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
 					</svg>
 				</div>
 				<h2
-					class="mt-6 text-2xl font-bold uppercase text-black lg:mt-8 lg:text-3xl"
+					class="text-2xl font-bold uppercase text-black md:mt-6 lg:mt-8 lg:text-3xl"
 				>
 					thank you <br />
 					for your order
@@ -66,10 +66,10 @@ onBeforeUnmount(() => {
 					You will receive an email confirmation shortly.
 				</p>
 				<div
-					class="mb-4 mt-6 flex h-fit w-full flex-col overflow-hidden rounded-lg lg:mb-6 lg:mt-8 lg:flex-row"
+					class="mb-4 mt-6 flex h-full w-full flex-col overflow-hidden rounded-lg lg:mb-6 lg:mt-8 lg:flex-row lg:items-center"
 				>
 					<div
-						class="flex h-full w-full flex-col justify-center bg-k-grey px-8 py-4"
+						class="flex h-full w-full flex-col justify-center bg-k-grey px-4 py-6 lg:basis-4/6"
 					>
 						<div class="flex h-full w-full flex-row items-center">
 							<img
@@ -103,16 +103,18 @@ onBeforeUnmount(() => {
 						</p>
 					</div>
 					<div
-						class="flex h-full w-full flex-col justify-center bg-black p-6 lg:w-4/5 lg:p-0"
+						class="flex flex-col justify-center bg-black px-6 py-6 lg:h-full lg:basis-2/6"
 					>
-						<p
-							class="text-md uppercase tracking-wide opacity-60 lg:ml-10 lg:text-lg"
-						>
-							Grand Total
-						</p>
-						<p class="text-md font-semibold lg:ml-10 lg:text-lg">
-							$ {{ cartStore.getGrandTotal }}
-						</p>
+						<div>
+							<p
+								class="text-md font-semibold uppercase tracking-wide opacity-90"
+							>
+								Grand Total
+							</p>
+							<p class="text-md font-semibold lg:text-lg">
+								$ {{ cartStore.getGrandTotal }}
+							</p>
+						</div>
 					</div>
 				</div>
 				<buttonSolid
