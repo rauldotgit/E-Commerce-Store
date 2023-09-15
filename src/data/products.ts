@@ -25,7 +25,7 @@ export interface catalog {
 
 // const categories: string[] = ["keyboards", "keycaps", "deskmats"]
 
-const products: catalog = {
+export const products: catalog = {
 	keyboards: [
 		{
 			id: 0,

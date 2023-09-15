@@ -104,11 +104,11 @@ describe('Desktop: Cart', () => {
 	})
 	it('toggles on icon button and close button', () => {
 		cy.visit('/')
-		cy.get('[data-test="cart-banner"]').should('not.be.visible')
+		cy.get('[data-test="cart-modal"]').should('not.be.visible')
 		cy.get('[data-test="cart-button"]').click()
-		cy.get('[data-test="cart-banner"]').should('be.visible')
+		cy.get('[data-test="cart-modal"]').should('be.visible')
 		cy.get('[data-test="cart-close-button"]').click()
-		cy.get('[data-test="cart-banner"]').should('not.be.visible')
+		cy.get('[data-test="cart-modal"]').should('not.be.visible')
 	})
 	it('bubble invisible when deleting all items', () => {
 		cy.visit('/keyboards')
