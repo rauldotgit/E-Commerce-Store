@@ -42,17 +42,17 @@ You can find a live deployment of this project [right here!](https://e-commerce-
 
 ### :wrench: Built with
 
-- [Vue.js - JS Frontend Framework](https://vuejs.org/)
-- [Vue Router - The official Router for Vue.js](https://router.vuejs.org/)
-- [Pinia - Central State management for Vue.js](https://pinia.vuejs.org/) 
-- [TypeScript - JS but type safe](https://www.typescriptlang.org/)
-- [TailwindCSS]
-- [Vite.js - Packaging and frontend tooling](https://vitejs.dev/)
-- [Crypess - Component and E2E Testing for JS](https://www.cypress.io/) 
-- ESLint / Prettier
+- [Vue.js](https://vuejs.org/) - JS Frontend Framework
+- [Vue Router](https://router.vuejs.org/) - The official Router for Vue.js
+- [Pinia](https://pinia.vuejs.org/) - Central State management for Vue.js
+- [TypeScript](https://www.typescriptlang.org/) - JS but type safe
+- [TailwindCSS](https://tailwindcss.com/) - Simple Frontend Styling in HTML
+- [Vite.js](https://vitejs.dev/) - Packaging and frontend tooling
+- [Crypess](https://www.cypress.io/) - Component and E2E Testing for JS
+- [ESLint](https://eslint.org/) / [Prettier](https://prettier.io/) - Linting and formatting
+- [Git](https://git-scm.com/) - Version control
+- [Asana](https://app.asana.com/) - For project management
 - HTML5
-- [Git - Version control](https://git-scm.com/) 
-- [Asana - For project management](https://app.asana.com/)
 
 ### :bulb: What I learned
 
