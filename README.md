@@ -30,9 +30,10 @@ Shop owners can easily add new products through the products file. Subsequently,
 
 ### :camera: Screenshot
 
-![](./screenshot.jpg)
+Landing Page Design
 
-TODO
+![Landing Page](./screenshots/e-commerce-store-amber-zeta.vercel.app_(1080p).png)
+
 
 ### :link: Links
 
