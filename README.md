@@ -12,7 +12,7 @@
     - [:wrench: Built with](#wrench-built-with)
     - [:bulb: What I learned](#bulb-what-i-learned)
     - [:mountain\_bicyclist: Continued development](#mountain_bicyclist-continued-development)
-    - [:cake: Aknodledgements \& Useful resources](#cake-aknodledgements--useful-resources)
+    - [:cake: Acknowledgements \& Useful resources](#cake-acknowledgements--useful-resources)
   - [Author](#author)
 
 
@@ -92,7 +92,7 @@ As this project was no different, I have a list of scribbled down ideas for futu
 - Aim for full test coverage on all components
 - Refine tablet view  
 
-### :cake: Aknodledgements & Useful resources
+### :cake: Acknowledgements & Useful resources
 
 [LearnVue](https://www.youtube.com/@LearnVue) is a must have resource for vue beginners to intermediate.
 
