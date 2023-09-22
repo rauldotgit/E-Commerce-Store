@@ -1,8 +1,8 @@
-# VUE.JS E-Commerce Project - KIIIBS Mechanical Keyboard Store :dollar:
+# VUE.JS E-Commerce Project - Mechanical Keyboard Store
 
 ## Table of contents
 
-- [VUE.JS E-Commerce Project - KIIIBS Mechanical Keyboard Store :dollar:](#vuejs-e-commerce-project---kiiibs-mechanical-keyboard-store-dollar)
+- [VUE.JS E-Commerce Project - Mechanical Keyboard Store](#vuejs-e-commerce-project---mechanical-keyboard-store)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [:mount\_fuji: The Challenge](#mount_fuji-the-challenge)
