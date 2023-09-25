@@ -2,7 +2,7 @@
 import { product } from '../../data/products.ts'
 import { onBeforeMount } from 'vue'
 import { getSelection } from '../../data/products.ts'
-import buttonSolid from '../All/Buttons/button-solid.vue'
+import ButtonSolid from '../All/Buttons/button-solid.vue'
 
 const props = defineProps<{
 	productCategory: string
@@ -17,7 +17,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-	<div class="mt-20 flex w-4/5 max-w-6xl flex-col items-center lg:mt-32">
+	<section class="mt-20 flex w-4/5 max-w-6xl flex-col items-center lg:mt-32">
 		<h2 class="mb-16 font-Manrope text-3xl font-bold uppercase text-black">
 			You may also like
 		</h2>
@@ -39,7 +39,7 @@ onBeforeMount(() => {
 					{{ item.header }} <br class="hidden lg:inline" />
 					<span class="capitalize"> {{ item.subheader }}</span>
 				</h3>
-				<buttonSolid
+				<ButtonSolid
 					:to="{ name: item.category, params: { id: item.id } }"
 					color="light"
 					content="see product"
@@ -47,5 +47,5 @@ onBeforeMount(() => {
 				/>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>

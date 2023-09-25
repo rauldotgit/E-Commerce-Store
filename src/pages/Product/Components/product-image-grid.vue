@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<div
+	<section
 		v-if="props.topSrc && props.botSrc && props.rightSrc"
 		class="mt-16 flex h-full w-full flex-col items-center bg-white lg:mt-32"
 	>
@@ -34,5 +34,5 @@ const props = defineProps<{
 				alt=""
 			/>
 		</div>
-	</div>
+	</section>
 </template>

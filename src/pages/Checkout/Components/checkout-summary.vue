@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useCartStore } from '../../../pinia/cartStore.ts'
 import { useFormStore } from '../../../pinia/formStore.ts'
-import item from './checkout-summary-item.vue'
-import buttonSolid from '../../All/Buttons/button-solid.vue'
+import SummaryItem from './checkout-summary-item.vue'
+import ButtonSolid from '../../All/Buttons/button-solid.vue'
 
 const cartStore = useCartStore()
 const formStore = useFormStore()
@@ -17,7 +17,7 @@ const formStore = useFormStore()
 		<div
 			class="my-10 flex h-full w-full flex-col gap-5 overflow-x-hidden overflow-y-scroll"
 		>
-			<item
+			<SummaryItem
 				v-for="(value, _, index) in cartStore.cart"
 				:cart-item="value.product"
 				:item-count="value.amount"
@@ -54,7 +54,7 @@ const formStore = useFormStore()
 			<p class="font-black tracking-wide text-black">GRAND TOTAL</p>
 			<p class="text-lg font-bold text-black">${{ cartStore.getGrandTotal }}</p>
 		</div>
-		<buttonSolid
+		<ButtonSolid
 			content="continue & pay"
 			color="light"
 			class="mt-8 self-center font-bold"

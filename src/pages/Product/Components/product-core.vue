@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { product } from '../../../data/products'
-import buttonSolid from '../../All/Buttons/button-solid.vue'
-import { useCartStore } from '../../../pinia/cartStore.ts'
+import ButtonSolid from '../../All/Buttons/button-solid.vue'
 import ButtonGoBack from '../../All/Buttons/button-go-back.vue'
+import { product } from '../../../data/products'
+import { useCartStore } from '../../../pinia/cartStore.ts'
 
 const cartStore = useCartStore()
 
@@ -13,7 +13,7 @@ const props = defineProps<{
 
 <template>
 	<ButtonGoBack />
-	<div
+	<section
 		class="flex w-4/5 max-w-6xl flex-col lg:grid lg:grid-cols-2 lg:grid-rows-1"
 	>
 		<div
@@ -35,7 +35,7 @@ const props = defineProps<{
 				{{ props.item.text }}
 			</p>
 			<p class="my-8 text-xl font-bold text-black">$ {{ props.item.price }}</p>
-			<buttonSolid
+			<ButtonSolid
 				@click="cartStore.addToCart(props.item)"
 				color="light"
 				add="font-bold"
@@ -52,5 +52,5 @@ const props = defineProps<{
 				alt=""
 			/>
 		</div>
-	</div>
+	</section>
 </template>

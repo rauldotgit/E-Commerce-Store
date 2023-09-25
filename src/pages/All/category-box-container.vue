@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import categoryBox from './category-box.vue'
+import CategoryBox from './category-box.vue'
 
-import keeb from '/products/categories/category-keyboards.webp'
-import keycap from '/products/categories/category-keycaps.webp'
-import deskmat from '/products/categories/category-deskmats.webp'
+import keebImage from '/products/categories/category-keyboards.webp'
+import keycapImage from '/products/categories/category-keycaps.webp'
+import deskmatImage from '/products/categories/category-deskmats.webp'
 
 const categories = [
 	{
-		src: keeb,
+		src: keebImage,
 		category: 'keyboards',
 		imgClass: [''],
 	},
 	{
-		src: keycap,
+		src: keycapImage,
 		category: 'keycaps',
 		imgClass: ['scale-90'],
 	},
 	{
-		src: deskmat,
+		src: deskmatImage,
 		category: 'deskmats',
 		imgClass: ['-mb-6', 'md:-mb-5', 'md:scale-110'],
 	},
@@ -29,7 +29,7 @@ const categories = [
 		<div
 			class="flex w-4/5 flex-col items-center gap-4 md:h-[17rem] md:w-11/12 md:max-w-6xl md:flex-row md:justify-center md:gap-6 lg:w-4/5"
 		>
-			<categoryBox
+			<CategoryBox
 				v-for="(item, index) in categories"
 				:key="index"
 				:src="item.src"

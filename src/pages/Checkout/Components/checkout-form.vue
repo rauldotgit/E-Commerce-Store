@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import TextInputField from './text-input-field.vue'
 import { useFormStore } from '../../../pinia/formStore'
-import textInputField from './text-input-field.vue'
 
 const formStore = useFormStore()
 </script>
@@ -17,7 +17,7 @@ const formStore = useFormStore()
 			<div
 				class="flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-2"
 			>
-				<textInputField
+				<TextInputField
 					type="text"
 					:validator="formStore.isValidName"
 					id="name"
@@ -28,7 +28,7 @@ const formStore = useFormStore()
 					:required="true"
 				/>
 
-				<textInputField
+				<TextInputField
 					type="email"
 					:validator="formStore.isValidEmail"
 					id="email"
@@ -39,7 +39,7 @@ const formStore = useFormStore()
 					:required="true"
 				/>
 
-				<textInputField
+				<TextInputField
 					type="tel"
 					:validator="formStore.isValidPhone"
 					id="phone"
@@ -58,7 +58,7 @@ const formStore = useFormStore()
 			<div
 				class="flex w-full flex-col items-center gap-4 lg:grid lg:grid-cols-2"
 			>
-				<textInputField
+				<TextInputField
 					type="text"
 					:validator="formStore.isValidAddress"
 					id="address"
@@ -70,7 +70,7 @@ const formStore = useFormStore()
 					:required="true"
 				/>
 
-				<textInputField
+				<TextInputField
 					type="text"
 					:validator="formStore.isValidZip"
 					id="zip"
@@ -82,7 +82,7 @@ const formStore = useFormStore()
 					:required="true"
 				/>
 
-				<textInputField
+				<TextInputField
 					type="text"
 					:validator="formStore.isValidCity"
 					id="city"
@@ -93,7 +93,7 @@ const formStore = useFormStore()
 					:required="true"
 				/>
 
-				<textInputField
+				<TextInputField
 					type="text"
 					:validator="formStore.isValidCountry"
 					id="country"

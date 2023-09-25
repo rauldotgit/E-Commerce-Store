@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import facebook from '/icons/facebook.svg'
-import twitter from '/icons/twitter.svg'
-import instagram from '/icons/instagram.svg'
+import facebookIcon from '/icons/facebook.svg'
+import twitterIcon from '/icons/twitter.svg'
+import instagramIcon from '/icons/instagram.svg'
 </script>
 
 <template>
-	<div
+	<footer
 		class="relative mt-20 flex h-full w-screen flex-col items-center bg-black md:mt-32 lg:mt-40"
 	>
 		<div
@@ -68,13 +68,13 @@ import instagram from '/icons/instagram.svg'
 				</p>
 				<nav class="flex flex-row gap-4 md:self-end">
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img class="aspect-square h-6" :src="facebook" alt="" />
+						<img class="aspect-square h-6" :src="facebookIcon" alt="" />
 					</a>
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img class="aspect-square h-6" :src="twitter" alt="" />
+						<img class="aspect-square h-6" :src="twitterIcon" alt="" />
 					</a>
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img class="aspect-square h-6" :src="instagram" alt="" />
+						<img class="aspect-square h-6" :src="instagramIcon" alt="" />
 					</a>
 				</nav>
 			</div>
@@ -84,5 +84,5 @@ import instagram from '/icons/instagram.svg'
 				Copyright 2023. All Rights Reserved
 			</p>
 		</div>
-	</div>
+	</footer>
 </template>

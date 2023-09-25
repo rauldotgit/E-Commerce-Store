@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import buttonEmpty from '../../All/Buttons/button-empty.vue'
-import buttonSolid from '../../All/Buttons/button-solid.vue'
-import kraken from '/products/deskmats/deskmat-kraken.webp'
-import keycaps from '/display/keycaps.webp'
-import front from '/display/cow-front-new.webp'
-import back from '/display/cow-back-new.webp'
+import ButtonEmpty from '../../All/Buttons/button-empty.vue'
+import ButtonSolid from '../../All/Buttons/button-solid.vue'
+import krakenImage from '/products/deskmats/deskmat-kraken.webp'
+import keycapsImage from '/display/keycaps.webp'
+import frontImage from '/display/cow-front-new.webp'
+import backImage from '/display/cow-back-new.webp'
 </script>
 
 <template>
-	<div
+	<section
 		class="mt-20 flex h-full w-full flex-col items-center md:-mb-10 md:h-[70rem]"
 	>
 		<div
@@ -27,12 +27,12 @@ import back from '/display/cow-back-new.webp'
 						class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden md:col-span-4 md:px-10"
 					>
 						<img
-							:src="front"
+							:src="frontImage"
 							alt=""
 							class="z-20 my-5 aspect-auto translate-x-3 translate-y-3 scale-110 md:my-0 md:translate-x-0 md:translate-y-0 md:scale-125 md:transition md:duration-700 md:group-hover:translate-x-6 md:group-hover:translate-y-6"
 						/>
 						<img
-							:src="back"
+							:src="backImage"
 							alt=""
 							class="absolute z-10 aspect-auto -translate-x-3 -translate-y-3 scale-110 md:translate-x-0 md:translate-y-0 md:scale-100 md:transition md:duration-700 md:group-hover:-translate-x-6 md:group-hover:-translate-y-6"
 						/>
@@ -64,7 +64,7 @@ import back from '/display/cow-back-new.webp'
 							Upgrade to premium keys that are phenominally built to deliver a
 							truly remarkable typing feel.
 						</p>
-						<buttonSolid
+						<ButtonSolid
 							:to="{ name: 'keyboards', params: { id: 1 } }"
 							content="SEE PRODUCT"
 							add="font-semibold hover:rotate-x-3"
@@ -77,7 +77,7 @@ import back from '/display/cow-back-new.webp'
 				class="order-3 flex w-full flex-col items-center justify-center gap-6 rounded-md bg-k-grey p-6 text-black md:order-none md:col-span-2 md:row-span-2 md:h-full md:items-start md:bg-white md:px-6"
 			>
 				<h2 class="text-3xl font-semibold uppercase">Kraken deskmat</h2>
-				<buttonEmpty
+				<ButtonEmpty
 					:to="{ name: 'deskmats', params: { id: 1 } }"
 					content="see product"
 				/>
@@ -88,21 +88,21 @@ import back from '/display/cow-back-new.webp'
 			>
 				<img
 					class="scale-150 object-cover grayscale duration-200"
-					:src="kraken"
+					:src="krakenImage"
 					alt=""
 				/>
 			</router-link>
 			<div
 				class="order-4 col-span-3 row-span-2 overflow-hidden rounded-md bg-k-grey text-black md:order-none md:h-full"
 			>
-				<img class="scale-150 object-cover" :src="keycaps" alt="" />
+				<img class="scale-150 object-cover" :src="keycapsImage" alt="" />
 			</div>
 			<div
 				class="order-5 col-span-3 row-span-2 flex w-full flex-col items-center justify-center gap-6 rounded-md bg-k-grey p-6 text-black md:order-none md:h-full md:items-start md:px-16"
 			>
 				<h2 class="text-3xl font-semibold uppercase">Keycaps</h2>
-				<buttonEmpty :to="{ path: 'keycaps' }" content="see all" />
+				<ButtonEmpty :to="{ path: 'keycaps' }" content="see all" />
 			</div>
 		</div>
-	</div>
+	</section>
 </template>

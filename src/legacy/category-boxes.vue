@@ -6,7 +6,7 @@ import arrow from '/icons/right-arrow.svg'
 </script>
 
 <template>
-	<div
+	<section
 		class="mt-16 flex h-full w-full flex-col items-center bg-white md:mt-24 lg:mt-32"
 	>
 		<div
@@ -95,5 +95,5 @@ import arrow from '/icons/right-arrow.svg'
 				</div>
 			</router-link>
 		</div>
-	</div>
+	</section>
 </template>

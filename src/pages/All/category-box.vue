@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import arrow from '/icons/right-arrow.svg'
+import arrowIcon from '/icons/right-arrow.svg'
 
 const props = defineProps<{
 	src: string
@@ -32,7 +32,7 @@ const props = defineProps<{
 				class="mt-2 flex flex-row items-center gap-2 text-sm font-semibold uppercase text-black opacity-50"
 			>
 				<p>shop</p>
-				<img :src="arrow" alt="arrow icon" />
+				<img :src="arrowIcon" alt="arrow icon" />
 			</div>
 		</div>
 	</router-link>

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import buttonSolid from '../../All/Buttons/button-solid.vue'
 import { product } from '../../../data/products'
-import buttonQuickAdd from '../../All/Buttons/button-quick-add.vue'
 import { useCartStore } from '../../../pinia/cartStore.ts'
+
+import ButtonSolid from '../../All/Buttons/button-solid.vue'
+import ButtonQuickAdd from '../../All/Buttons/button-quick-add.vue'
 
 const cartStore = useCartStore()
 
@@ -51,12 +52,12 @@ onMounted(() => {
 			<div
 				class="flex flex-row items-center justify-center gap-4 md:justify-normal"
 			>
-				<buttonSolid
+				<ButtonSolid
 					:to="{ name: props.category, params: { id: props.item.id } }"
 					color="light"
 					add="font-bold"
 				/>
-				<buttonQuickAdd
+				<ButtonQuickAdd
 					v-if="cartStore.showQuickAdd"
 					@add-to-cart="cartStore.addToCart(props.item)"
 					:data-test="`quick-add-${props.item.category}-${props.item.id}`"

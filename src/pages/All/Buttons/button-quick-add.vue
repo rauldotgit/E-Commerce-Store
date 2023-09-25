@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import cart from '/icons/cart-icon.svg'
+import cartIcon from '/icons/cart-icon.svg'
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import cart from '/icons/cart-icon.svg'
 	>
 		<img
 			class="aspect-square h-6 invert active:translate-y-0.5"
-			:src="cart"
+			:src="cartIcon"
 			alt=""
 		/>
 		<p class="font-bold text-black">+</p>

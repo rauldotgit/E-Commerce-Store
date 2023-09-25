@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import cart from '/icons/cart-icon.svg'
+import cartIcon from '/icons/cart-icon.svg'
 import Cart from './Cart/cart-modal.vue'
 import { computed, ref } from 'vue'
 import { useCartStore } from '../../pinia/cartStore.ts'
 
 interface Props {
-	color?: 'black' | 'transparent'
+	color?: 'black' | 'transparent' | 'k-black'
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -30,15 +30,14 @@ function hideHamburger(): void {
 </script>
 
 <template>
-	<div
+	<header
 		id="navi"
 		class="main-container flex h-full w-screen flex-col items-center"
 		:class="style"
 		data-test="nav-desktop"
 	>
 		<div
-			class="relative flex w-4/5 max-w-6xl flex-row items-center justify-between py-6 md:w-11/12 lg:w-4/5"
-			:class="props.color === 'transparent' && 'border-b border-zinc-500'"
+			class="relative flex w-4/5 max-w-6xl flex-row items-center justify-between border-b border-zinc-500 py-6 md:w-11/12 lg:w-4/5"
 		>
 			<button
 				id="hamburger"
@@ -102,7 +101,7 @@ function hideHamburger(): void {
 			>
 				<img
 					class="h-full hover:opacity-50 active:translate-y-0.5"
-					:src="cart"
+					:src="cartIcon"
 					alt=""
 				/>
 				<Transition>
@@ -165,5 +164,5 @@ function hideHamburger(): void {
 				</router-link>
 			</nav>
 		</transition>
-	</div>
+	</header>
 </template>

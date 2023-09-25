@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import buttonCount from '../Buttons/button-count.vue'
+import ButtonCount from '../Buttons/button-count.vue'
 import { product } from '../../../data/products'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 
@@ -31,7 +31,7 @@ const props = defineProps<{
 				</p>
 			</div>
 		</div>
-		<buttonCount
+		<ButtonCount
 			:item-count="props.itemCount"
 			@increase-cart="cartStore.addToCart(cartItem)"
 			@decrease-cart="cartStore.removeFromCart(cartItem)"

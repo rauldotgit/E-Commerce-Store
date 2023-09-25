@@ -3,13 +3,12 @@ import Navigation from '../All/navigation-global.vue'
 import Core from './Components/product-core.vue'
 import Ymal from '../All/ymal-boxes.vue'
 import Grid from './Components/product-image-grid.vue'
-// import Categories from '../All/Categories.vue'
 import Info from '../All/info-section.vue'
 import Footer from '../All/footer-global.vue'
+import Features from './Components/product-features.vue'
 
 import { getProduct } from '../../data/products.ts'
 import { computed } from 'vue'
-import Features from './Components/product-features.vue'
 
 const props = defineProps<{
 	category: string
@@ -22,9 +21,8 @@ let item = computed(() => {
 </script>
 
 <template>
-	<div class="flex h-full w-screen flex-col items-center bg-white">
+	<main class="flex h-full w-screen flex-col items-center bg-white">
 		<Navigation color="black" />
-		<!-- <h1 class="text-6xl text-black">{{ props.productId }}</h1> -->
 		<Core :item="item!" />
 		<Features :features="item!.features" :inthebox="item!.inthebox" />
 		<Grid
@@ -33,8 +31,7 @@ let item = computed(() => {
 			:rightSrc="item!.rightSrc"
 		/>
 		<Ymal :productCategory="category" :productId="productId" />
-		<!-- <Categories /> -->
 		<Info />
 		<Footer />
-	</div>
+	</main>
 </template>

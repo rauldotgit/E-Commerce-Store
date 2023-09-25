@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import switches from '/display/switch-array.webp'
+import switchesImage from '/display/switch-array.webp'
 </script>
 
 <template>
-	<div
-		class="mt-20 flex h-full w-4/5 max-w-6xl flex-col items-center justify-center md:mt-32 md:h-[38rem] md:w-11/12 lg:mt-40 lg:h-[40rem] lg:w-4/5"
+	<section
+		class="mt-20 flex h-full flex-col items-center justify-center md:mt-32 lg:mt-40"
 	>
 		<div
-			class="flex h-full w-full flex-col items-center gap-10 md:flex-row md:items-start md:justify-between md:gap-32"
+			class="flex h-full w-4/5 max-w-6xl flex-col items-center gap-10 md:h-[38rem] md:w-11/12 md:flex-row md:items-start md:justify-between md:gap-32 lg:h-[40rem] lg:w-4/5"
 		>
 			<div
-				class="flex h-full flex-col items-center justify-center text-center md:w-4/5 md:text-start"
+				class="flex h-full flex-col items-center justify-center text-center md:w-4/5 md:items-start md:text-start"
 			>
 				<h3 class="text-4xl font-semibold uppercase text-k-black md:text-5xl">
 					Bringing you the <br class="hidden xl:inline" />
@@ -32,11 +32,11 @@ import switches from '/display/switch-array.webp'
 				<img
 					loading="lazy"
 					class="h-full w-full object-cover"
-					:src="switches"
+					:src="switchesImage"
 					alt=""
 					srcset=""
 				/>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>

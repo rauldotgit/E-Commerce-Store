@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import buttonSolid from '../../All/Buttons/button-solid.vue'
+import ButtonSolid from '../../All/Buttons/button-solid.vue'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 import { useFormStore } from '../../../pinia/formStore'
 import { onBeforeMount, onBeforeUnmount } from 'vue'
@@ -24,7 +24,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
 	<Transition>
-		<div
+		<modal
 			class="fixed z-40 flex h-full w-full flex-col items-center backdrop-blur-sm"
 			data-test="checkout-success-modal"
 		>
@@ -117,7 +117,7 @@ onBeforeUnmount(() => {
 						</div>
 					</div>
 				</div>
-				<buttonSolid
+				<ButtonSolid
 					to="/"
 					@click="handleClose()"
 					color="light"
@@ -126,6 +126,6 @@ onBeforeUnmount(() => {
 					data-test="checkout-success-modal-button"
 				/>
 			</div>
-		</div>
+		</modal>
 	</Transition>
 </template>

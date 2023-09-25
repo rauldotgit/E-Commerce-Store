@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import buttonSolid from './All/Buttons/button-solid.vue'
+import ButtonSolid from './All/Buttons/button-solid.vue'
 </script>
 
 <template>
-	<div
+	<main
 		class="flex h-screen w-screen flex-col items-center justify-center bg-black text-white"
 	>
 		<div
@@ -13,7 +13,7 @@ import buttonSolid from './All/Buttons/button-solid.vue'
 			<p class="text-md tracking-widest opacity-70">
 				Stare at the abyss and the abyss stares back at you!
 			</p>
-			<buttonSolid
+			<ButtonSolid
 				to="/"
 				:color="'light'"
 				:content="'To Safety'"
@@ -21,5 +21,5 @@ import buttonSolid from './All/Buttons/button-solid.vue'
 				add="font-bold mt-8"
 			/>
 		</div>
-	</div>
+	</main>
 </template>

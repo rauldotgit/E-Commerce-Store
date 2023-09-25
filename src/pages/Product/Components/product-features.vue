@@ -7,7 +7,7 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-	<div
+	<section
 		class="mt-16 flex w-4/5 max-w-6xl flex-col lg:mt-32 lg:grid lg:grid-cols-2 lg:grid-rows-1"
 	>
 		<div class="flex h-full w-full flex-col">
@@ -31,5 +31,5 @@ const props = defineProps<{
 				</p>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>

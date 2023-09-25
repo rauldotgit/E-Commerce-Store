@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import Navigation from '../All/navigation-global.vue'
-import categoryBoxes from '../All/category-box-container.vue'
+import CategoryBoxes from '../All/category-box-container.vue'
 import Info from '../All/info-section.vue'
 import Footer from '../All/footer-global.vue'
 import Showbox from './Components/category-show-box.vue'
+
 import { getProductsOfType } from '../../data/products.ts'
 import { computed } from 'vue'
 
@@ -15,21 +16,21 @@ const products = computed(() => getProductsOfType(props.category))
 </script>
 
 <template>
-	<div
+	<Navigation color="black" />
+	<header class="flex w-full flex-col items-center bg-black lg:rounded-b-lg">
+		<div
+			class="my-10 flex w-4/5 max-w-6xl flex-col items-center justify-center lg:my-20"
+		>
+			<h1
+				class="text-4xl font-semibold uppercase tracking-wider text-white antialiased"
+			>
+				{{ props.category }}
+			</h1>
+		</div>
+	</header>
+	<main
 		class="main-container flex h-full w-screen flex-col items-center bg-white"
 	>
-		<header class="flex w-full flex-col items-center bg-black lg:rounded-b-lg">
-			<Navigation />
-			<div
-				class="my-10 flex w-4/5 max-w-6xl flex-col items-center justify-center lg:my-20"
-			>
-				<h1
-					class="text-4xl font-semibold uppercase tracking-wider text-white antialiased"
-				>
-					{{ props.category }}
-				</h1>
-			</div>
-		</header>
 		<Showbox
 			v-for="(product, index) in products"
 			:item="product"
@@ -37,8 +38,8 @@ const products = computed(() => getProductsOfType(props.category))
 			:data-test="`showbox-${product.category}-${product.id}`"
 			:key="index"
 		/>
-		<categoryBoxes />
+		<CategoryBoxes />
 		<Info />
 		<Footer />
-	</div>
+	</main>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import buttonSolid from '../Buttons/button-solid.vue'
-import cartItem from './cart-item.vue'
+import ButtonSolid from '../Buttons/button-solid.vue'
+import CartItem from './cart-item.vue'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 
 const cartStore = useCartStore()
@@ -8,7 +8,7 @@ const cartStore = useCartStore()
 
 <template>
 	<Transition>
-		<div
+		<modal
 			class="fixed z-50 flex h-screen w-full flex-col items-center backdrop-blur-sm lg:block lg:items-start"
 			data-test="cart-modal"
 		>
@@ -55,7 +55,7 @@ const cartStore = useCartStore()
 					class="mb-10 flex h-full w-full flex-col gap-5 overflow-y-scroll"
 					data-test="cart-item-container"
 				>
-					<cartItem
+					<CartItem
 						v-for="(value, _, index) in cartStore.cart"
 						:cart-item="value.product"
 						:item-count="value.amount"
@@ -73,7 +73,7 @@ const cartStore = useCartStore()
 						${{ cartStore.cartValue }}
 					</p>
 				</div>
-				<buttonSolid
+				<ButtonSolid
 					v-if="!(cartStore.cartLength === 0)"
 					to="/checkout"
 					class="mb-10"
@@ -84,6 +84,6 @@ const cartStore = useCartStore()
 					data-test="cart-checkout-button"
 				/>
 			</div>
-		</div>
+		</modal>
 	</Transition>
 </template>
