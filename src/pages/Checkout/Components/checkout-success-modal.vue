@@ -24,7 +24,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
 	<Transition>
-		<modal
+		<div
 			class="fixed z-40 flex h-full w-full flex-col items-center backdrop-blur-sm"
 			data-test="checkout-success-modal"
 		>
@@ -126,6 +126,6 @@ onBeforeUnmount(() => {
 					data-test="checkout-success-modal-button"
 				/>
 			</div>
-		</modal>
+		</div>
 	</Transition>
 </template>

@@ -47,6 +47,7 @@ You can find a live deployment of this project [right here!](https://e-commerce-
 - [Vue.js](https://vuejs.org/) - JS Frontend Framework
 - [Vue Router](https://router.vuejs.org/) - The official Router for Vue.js
 - [Pinia](https://pinia.vuejs.org/) - Central State management for Vue.js
+- [Unhead](https://unhead.unjs.io/) - Any-framework document head manager
 - [TypeScript](https://www.typescriptlang.org/) - JS but type safe
 - [TailwindCSS](https://tailwindcss.com/) - Simple Frontend Styling in HTML
 - [Vite.js](https://vitejs.dev/) - Packaging and frontend tooling
@@ -71,11 +72,15 @@ Learned but not yet implemented image optimization.
 
 Learned more about Tailwind dynamic styling for forms with validation, absolute placement such as in cart, auto margins, image layouts, flex basis and responsive design.
 
+Learner about page meta tags and how to dynamically overwrite meta data with unhead on SPA's.
+
 Small bits of DOM related JS, such as disabling the scroll functionality on cart modal show or purchase success modal.
 
 Cypress component and E2E testing with different viewport sizes.
 
 ### :mountain_bicyclist: Continued development
+
+TLDR: Nuxt refactor and backend functionality (authentication etc.)
 
 During all of my previous projects, I have noticed that each new problem in web development can drag you into a rabbit hole of new functionalities to add, new tools to use and ways to optimize past solutions.
 

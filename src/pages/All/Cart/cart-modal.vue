@@ -8,7 +8,7 @@ const cartStore = useCartStore()
 
 <template>
 	<Transition>
-		<modal
+		<div
 			class="fixed z-50 flex h-screen w-full flex-col items-center backdrop-blur-sm lg:block lg:items-start"
 			data-test="cart-modal"
 		>
@@ -84,6 +84,6 @@ const cartStore = useCartStore()
 					data-test="cart-checkout-button"
 				/>
 			</div>
-		</modal>
+		</div>
 	</Transition>
 </template>
