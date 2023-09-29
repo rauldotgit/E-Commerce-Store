@@ -1,7 +1,7 @@
 import CartModal from './cart-modal.vue'
 import { createTestingPinia } from '@pinia/testing'
-import { useCartStore } from '../../../pinia/cartStore'
-import { products } from '../../../data/products.ts'
+import { useCartStore } from '../../pinia/cartStore'
+import { products } from '../../data/products.ts'
 
 describe('Desktop: <CartModal />', () => {
 	beforeEach(() => {

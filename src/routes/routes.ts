@@ -1,18 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { generalRoute, categoryRoute, productRoute } from './route-utils'
 import {
-	getLandingPageMeta,
-	get404PageMeta,
-	getCheckoutPageMeta,
-} from '../data/meta'
+	generalRoute,
+	categoryRoute,
+	productRoute,
+	landingRoute,
+} from './route-utils'
+import { get404PageMeta, getCheckoutPageMeta } from '../data/meta'
 
 const routes = [
-	generalRoute({
-		routePath: '',
-		name: 'Home',
-		component: '../pages/Landing/landing-page.vue',
-		metaFunc: getLandingPageMeta,
-	}),
+	landingRoute(),
 	generalRoute({
 		routePath: 'checkout',
 		component: '../pages/Checkout/checkout-page.vue',
@@ -27,7 +23,7 @@ const routes = [
 	}),
 	generalRoute({
 		routePath: ':patchMatch(.*)',
-		component: '../pages/404-page.vue',
+		component: '../pages/404/404-page.vue',
 		metaFunc: get404PageMeta,
 		lazy: true,
 	}),

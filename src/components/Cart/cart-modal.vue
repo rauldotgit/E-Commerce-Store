@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ButtonSolid from '../Buttons/button-solid.vue'
 import CartItem from './cart-item.vue'
-import { useCartStore } from '../../../pinia/cartStore.ts'
+import { useCartStore } from '../../pinia/cartStore.ts'
 
 const cartStore = useCartStore()
 </script>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Navigation from '../All/navigation-global.vue'
-import Footer from '../All/footer-global.vue'
-import ButtonBack from '../All/Buttons/button-go-back.vue'
+import Navigation from '../../components/navigation-global.vue'
+import Footer from '../../components/footer-global.vue'
+import ButtonBack from '../../components/Buttons/button-go-back.vue'
 import Grid from './Components/checkout-grid.vue'
 import Banner from './Components/checkout-success-modal.vue'
 

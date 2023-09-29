@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonSolid from '../../All/Buttons/button-solid.vue'
+import ButtonSolid from '../../../components/Buttons/button-solid.vue'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 import { useFormStore } from '../../../pinia/formStore'
 import { onBeforeMount, onBeforeUnmount } from 'vue'

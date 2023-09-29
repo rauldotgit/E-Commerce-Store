@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ButtonSolid from '../../All/Buttons/button-solid.vue'
-import ButtonGoBack from '../../All/Buttons/button-go-back.vue'
+import ButtonSolid from '../../../components/Buttons/button-solid.vue'
+import ButtonGoBack from '../../../components/Buttons/button-go-back.vue'
 import { product } from '../../../data/products'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 

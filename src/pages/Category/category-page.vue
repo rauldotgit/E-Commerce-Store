@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import Navigation from '../All/navigation-global.vue'
-import CategoryBoxes from '../All/category-box-container.vue'
-import Info from '../All/info-section.vue'
-import Footer from '../All/footer-global.vue'
+import Navigation from '../../components/navigation-global.vue'
+import CategoryBoxes from '../../components/Category-Box/category-box-container.vue'
+import Info from '../../components/info-section.vue'
+import Footer from '../../components/footer-global.vue'
 import Showbox from './Components/category-show-box.vue'
-
 import { getProductsOfType } from '../../data/products.ts'
 import { computed } from 'vue'
 

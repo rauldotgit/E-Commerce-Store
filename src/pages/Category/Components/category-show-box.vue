@@ -3,8 +3,8 @@ import { computed, onMounted, ref } from 'vue'
 import { product } from '../../../data/products'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 
-import ButtonSolid from '../../All/Buttons/button-solid.vue'
-import ButtonQuickAdd from '../../All/Buttons/button-quick-add.vue'
+import ButtonSolid from '../../../components/Buttons/button-solid.vue'
+import ButtonQuickAdd from '../../../components/Buttons/button-quick-add.vue'
 
 const cartStore = useCartStore()
 

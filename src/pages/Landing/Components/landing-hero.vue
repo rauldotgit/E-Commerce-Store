@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ButtonSolid from '../../All/Buttons/button-solid.vue'
+import ButtonSolid from '../../../components/Buttons/button-solid.vue'
 import mxupImage from '/products/keyboards/up-nobg.webp'
 </script>
 

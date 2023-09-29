@@ -2,7 +2,7 @@
 import { useCartStore } from '../../../pinia/cartStore.ts'
 import { useFormStore } from '../../../pinia/formStore.ts'
 import SummaryItem from './checkout-summary-item.vue'
-import ButtonSolid from '../../All/Buttons/button-solid.vue'
+import ButtonSolid from '../../../components/Buttons/button-solid.vue'
 
 const cartStore = useCartStore()
 const formStore = useFormStore()

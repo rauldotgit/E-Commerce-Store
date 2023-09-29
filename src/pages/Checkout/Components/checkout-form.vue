@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TextInputField from './text-input-field.vue'
-import { useFormStore } from '../../../pinia/formStore'
+import { useFormStore } from '../../../pinia/formStore.ts'
 
 const formStore = useFormStore()
 </script>

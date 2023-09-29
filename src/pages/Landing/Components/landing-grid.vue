@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ButtonEmpty from '../../All/Buttons/button-empty.vue'
-import ButtonSolid from '../../All/Buttons/button-solid.vue'
+import ButtonEmpty from '../../../components/Buttons/button-empty.vue'
+import ButtonSolid from '../../../components/Buttons/button-solid.vue'
 import krakenImage from '/products/deskmats/deskmat-kraken.webp'
 import keycapsImage from '/display/keycaps.webp'
 import frontImage from '/display/cow-front-new.webp'

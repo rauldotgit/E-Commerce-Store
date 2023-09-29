@@ -1,7 +1,13 @@
+import LandingPage from '../pages/Landing/landing-page.vue'
 import { RouteLocationNormalized, NavigationGuardNext } from 'vue-router'
 import { useSeoMeta } from '@unhead/vue'
 import { getProduct } from '../data/products.ts'
-import { meta, getCategoryPageMeta, getProductPageMeta } from '../data/meta'
+import {
+	meta,
+	getCategoryPageMeta,
+	getProductPageMeta,
+	getLandingPageMeta,
+} from '../data/meta'
 
 function parseRouteId(id: string | string[]): number {
 	if (Array.isArray(id)) return parseInt(id[0])
@@ -16,17 +22,34 @@ interface generalRouteParams {
 	metaFunc: () => meta
 }
 
+export function landingRoute() {
+	return {
+		path: '/',
+		name: 'Home',
+		component: LandingPage,
+		beforeEnter: () => {
+			const meta = getLandingPageMeta()
+			useSeoMeta({
+				title: meta.title,
+				description: meta.description,
+				ogTitle: meta.title,
+				ogDescription: meta.description,
+				ogImage: meta.image,
+			})
+		},
+	}
+}
+
 export function generalRoute({
 	routePath,
 	name,
 	component,
-	lazy = false,
 	metaFunc,
 }: generalRouteParams) {
 	return {
 		path: `/${routePath}`,
 		...(name && { name: name }),
-		component: lazy ? () => import(component) : import(component),
+		component: () => import(component),
 		beforeEnter: () => {
 			const meta = metaFunc()
 			useSeoMeta({

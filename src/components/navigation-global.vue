@@ -2,7 +2,7 @@
 import cartIcon from '/icons/cart-icon.svg'
 import Cart from './Cart/cart-modal.vue'
 import { computed, ref } from 'vue'
-import { useCartStore } from '../../pinia/cartStore.ts'
+import { useCartStore } from '../pinia/cartStore.ts'
 
 interface Props {
 	color?: 'black' | 'transparent' | 'k-black'

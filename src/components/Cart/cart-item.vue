@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ButtonCount from '../Buttons/button-count.vue'
-import { product } from '../../../data/products'
-import { useCartStore } from '../../../pinia/cartStore.ts'
+import { product } from '../../data/products'
+import { useCartStore } from '../../pinia/cartStore.ts'
 
 const cartStore = useCartStore()
 

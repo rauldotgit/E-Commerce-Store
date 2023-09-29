@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Navigation from '../All/navigation-global.vue'
+import Navigation from '../../components/navigation-global.vue'
 import Core from './Components/product-core.vue'
-import Ymal from '../All/ymal-boxes.vue'
+import Ymal from '../../components/ymal-boxes.vue'
 import Grid from './Components/product-image-grid.vue'
-import Info from '../All/info-section.vue'
-import Footer from '../All/footer-global.vue'
+import Info from '../../components/info-section.vue'
+import Footer from '../../components/footer-global.vue'
 import Features from './Components/product-features.vue'
 
 import { getProduct } from '../../data/products.ts'

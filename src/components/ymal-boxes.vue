@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { product } from '../../data/products.ts'
+import { product, getSelection } from '../data/products'
 import { onBeforeMount } from 'vue'
-import { getSelection } from '../../data/products.ts'
-import ButtonSolid from '../All/Buttons/button-solid.vue'
+import ButtonSolid from '../components/Buttons/button-solid.vue'
 
 const props = defineProps<{
 	productCategory: string
