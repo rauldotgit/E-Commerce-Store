@@ -9,8 +9,6 @@ import Features from './Components/product-features.vue'
 
 import { getProduct } from '../../data/products.ts'
 import { computed } from 'vue'
-import { useSeoMeta } from '@unhead/vue'
-// import { getProductPageMeta } from '../../data/meta'
 
 const props = defineProps<{
 	category: string
@@ -19,10 +17,6 @@ const props = defineProps<{
 
 let item = computed(() => {
 	return getProduct(props.category, props.productId)
-})
-
-useSeoMeta({
-	title: 'something else',
 })
 </script>
 

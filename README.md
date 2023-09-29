@@ -74,6 +74,8 @@ Learned more about Tailwind dynamic styling for forms with validation, absolute 
 
 Learner about page meta tags and how to dynamically overwrite meta data with unhead on SPA's.
 
+Learned about open graph protocol to represent page data on other web pages.
+
 Small bits of DOM related JS, such as disabling the scroll functionality on cart modal show or purchase success modal.
 
 Cypress component and E2E testing with different viewport sizes.
