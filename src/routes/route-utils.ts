@@ -1,66 +1,23 @@
-import LandingPage from '../pages/Landing/landing-page.vue'
 import { RouteLocationNormalized, NavigationGuardNext } from 'vue-router'
 import { useSeoMeta } from '@unhead/vue'
 import { getProduct } from '../data/product-utils.ts'
 import { meta } from '../data/meta-types'
-import {
-	getCategoryPageMeta,
-	getProductPageMeta,
-	getLandingPageMeta,
-} from '../data/meta-utils'
+import { getCategoryPageMeta, getProductPageMeta } from '../data/meta-utils'
 
 function parseRouteId(id: string | string[]): number {
 	if (Array.isArray(id)) return parseInt(id[0])
 	return parseInt(id)
 }
 
-interface generalRouteParams {
-	routePath: string
-	name?: string
-	component: string
-	lazy?: boolean
-	metaFunc: () => meta
-}
-
-export function landingRoute() {
-	return {
-		path: '/',
-		name: 'Home',
-		component: LandingPage,
-		beforeEnter: () => {
-			const meta = getLandingPageMeta()
-			useSeoMeta({
-				title: meta.title,
-				description: meta.description,
-				ogTitle: meta.title,
-				ogDescription: meta.description,
-				ogImage: meta.image,
-			})
-		},
-	}
-}
-
-export function generalRoute({
-	routePath,
-	name,
-	component,
-	metaFunc,
-}: generalRouteParams) {
-	return {
-		path: `/${routePath}`,
-		...(name && { name: name }),
-		component: () => import(component),
-		beforeEnter: () => {
-			const meta = metaFunc()
-			useSeoMeta({
-				title: meta.title,
-				description: meta.description,
-				ogTitle: meta.title,
-				ogDescription: meta.description,
-				ogImage: meta.image,
-			})
-		},
-	}
+export function handleRouteMeta(metaFunc: () => meta): void {
+	const metaData = metaFunc()
+	useSeoMeta({
+		title: metaData.title,
+		description: metaData.description,
+		ogTitle: metaData.title,
+		ogDescription: metaData.description,
+		ogImage: metaData.image,
+	})
 }
 
 export function categoryRoute(category: string) {

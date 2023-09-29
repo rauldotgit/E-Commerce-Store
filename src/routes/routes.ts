@@ -1,32 +1,34 @@
+import LandingPage from '../pages/Landing/landing-page.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import { categoryRoute, productRoute, handleRouteMeta } from './route-utils'
 import {
-	generalRoute,
-	categoryRoute,
-	productRoute,
-	landingRoute,
-} from './route-utils'
-import { get404PageMeta, getCheckoutPageMeta } from '../data/meta-utils'
+	get404PageMeta,
+	getCheckoutPageMeta,
+	getLandingPageMeta,
+} from '../data/meta-utils'
 
 const routes = [
-	landingRoute(),
-	generalRoute({
-		routePath: 'checkout',
-		component: '../pages/Checkout/checkout-page.vue',
-		metaFunc: getCheckoutPageMeta,
-		lazy: true,
-	}),
-	generalRoute({
-		routePath: '404',
-		component: '../pages/404-page.vue',
-		metaFunc: get404PageMeta,
-		lazy: true,
-	}),
-	generalRoute({
-		routePath: ':patchMatch(.*)',
-		component: '../pages/404/404-page.vue',
-		metaFunc: get404PageMeta,
-		lazy: true,
-	}),
+	{
+		path: '/',
+		name: 'Home',
+		component: LandingPage,
+		beforeEnter: () => handleRouteMeta(getLandingPageMeta),
+	},
+	{
+		path: '/checkout',
+		component: () => import('../pages/Checkout/checkout-page.vue'),
+		beforeEnter: () => handleRouteMeta(getCheckoutPageMeta),
+	},
+	{
+		path: '/404',
+		component: () => import('../pages/404/404-page.vue'),
+		beforeEnter: () => handleRouteMeta(get404PageMeta),
+	},
+	{
+		path: '/:pathMatch(.*)',
+		component: () => import('../pages/404/404-page.vue'),
+		beforeEnter: () => handleRouteMeta(get404PageMeta),
+	},
 	categoryRoute('keyboards'),
 	categoryRoute('keycaps'),
 	categoryRoute('deskmats'),
