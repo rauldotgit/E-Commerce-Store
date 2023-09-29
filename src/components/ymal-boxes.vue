@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { product, getSelection } from '../data/products'
+import { product } from '../data/product-types.ts'
+import { getSelection } from '../data/product-utils.ts'
 import { onBeforeMount } from 'vue'
 import ButtonSolid from '../components/Buttons/button-solid.vue'
 

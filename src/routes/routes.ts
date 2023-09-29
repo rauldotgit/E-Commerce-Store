@@ -5,7 +5,7 @@ import {
 	productRoute,
 	landingRoute,
 } from './route-utils'
-import { get404PageMeta, getCheckoutPageMeta } from '../data/meta'
+import { get404PageMeta, getCheckoutPageMeta } from '../data/meta-utils'
 
 const routes = [
 	landingRoute(),

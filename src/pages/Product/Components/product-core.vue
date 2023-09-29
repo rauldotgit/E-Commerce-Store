@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ButtonSolid from '../../../components/Buttons/button-solid.vue'
 import ButtonGoBack from '../../../components/Buttons/button-go-back.vue'
-import { product } from '../../../data/products'
+import { product } from '../../../data/product-types.ts'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 
 const cartStore = useCartStore()

@@ -1,13 +1,13 @@
 import LandingPage from '../pages/Landing/landing-page.vue'
 import { RouteLocationNormalized, NavigationGuardNext } from 'vue-router'
 import { useSeoMeta } from '@unhead/vue'
-import { getProduct } from '../data/products.ts'
+import { getProduct } from '../data/product-utils.ts'
+import { meta } from '../data/meta-types'
 import {
-	meta,
 	getCategoryPageMeta,
 	getProductPageMeta,
 	getLandingPageMeta,
-} from '../data/meta'
+} from '../data/meta-utils'
 
 function parseRouteId(id: string | string[]): number {
 	if (Array.isArray(id)) return parseInt(id[0])

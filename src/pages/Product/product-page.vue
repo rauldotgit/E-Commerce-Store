@@ -7,7 +7,7 @@ import Info from '../../components/info-section.vue'
 import Footer from '../../components/footer-global.vue'
 import Features from './Components/product-features.vue'
 
-import { getProduct } from '../../data/products.ts'
+import { getProduct } from '../../data/product-utils.ts'
 import { computed } from 'vue'
 
 const props = defineProps<{

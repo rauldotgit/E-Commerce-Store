@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { product } from '../data/products.ts'
+import { product } from '../data/product-types.ts'
 
 interface cartItem {
 	product: product

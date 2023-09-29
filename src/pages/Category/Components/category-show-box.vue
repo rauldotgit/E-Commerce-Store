@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { product } from '../../../data/products'
+import { product } from '../../../data/product-types.ts'
 import { useCartStore } from '../../../pinia/cartStore.ts'
 
 import ButtonSolid from '../../../components/Buttons/button-solid.vue'

@@ -4,7 +4,7 @@ import CategoryBoxes from '../../components/Category-Box/category-box-container.
 import Info from '../../components/info-section.vue'
 import Footer from '../../components/footer-global.vue'
 import Showbox from './Components/category-show-box.vue'
-import { getProductsOfType } from '../../data/products.ts'
+import { getProductsOfType } from '../../data/product-utils.ts'
 import { computed } from 'vue'
 
 const props = defineProps<{

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { product } from '../../../data/products'
+import { product } from '../../../data/product-types.ts'
 
 const props = defineProps<{
 	cartItem: product
