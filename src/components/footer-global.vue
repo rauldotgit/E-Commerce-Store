@@ -24,11 +24,12 @@ import instagramIcon from '/icons/instagram.svg'
 				id="titleNav"
 				class="mb-10 flex flex-col items-center justify-between md:flex-row"
 			>
-				<h3
+				<router-link
+					to="/"
 					class="mb-8 cursor-pointer text-4xl font-bold text-white subpixel-antialiased transition duration-300 hover:scale-110 hover:text-k-main md:mb-0 md:text-3xl"
 				>
 					KIIIBS
-				</h3>
+				</router-link>
 				<nav
 					class="flex flex-col items-center justify-between gap-6 md:flex-row md:items-start md:gap-10"
 				>
@@ -68,13 +69,28 @@ import instagramIcon from '/icons/instagram.svg'
 				</p>
 				<nav class="flex flex-row gap-4 md:self-end">
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img loading="lazy" class="aspect-square h-6" :src="facebookIcon" alt="" />
+						<img
+							loading="lazy"
+							class="aspect-square h-6"
+							:src="facebookIcon"
+							alt=""
+						/>
 					</a>
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img loading="lazy" class="aspect-square h-6" :src="twitterIcon" alt="" />
+						<img
+							loading="lazy"
+							class="aspect-square h-6"
+							:src="twitterIcon"
+							alt=""
+						/>
 					</a>
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img loading="lazy" class="aspect-square h-6" :src="instagramIcon" alt="" />
+						<img
+							loading="lazy"
+							class="aspect-square h-6"
+							:src="instagramIcon"
+							alt=""
+						/>
 					</a>
 				</nav>
 			</div>
