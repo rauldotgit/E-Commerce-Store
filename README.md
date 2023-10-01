@@ -11,6 +11,15 @@
   - [My process](#my-process)
     - [:wrench: Built with](#wrench-built-with)
     - [:bulb: I learned how to](#bulb-i-learned-how-to)
+      - [Vue Router:](#vue-router)
+      - [State management (Vuex / Pinia / Vueuse):](#state-management-vuex--pinia--vueuse)
+      - [Typescript:](#typescript)
+      - [Tailwind:](#tailwind)
+      - [Cypress Testing:](#cypress-testing)
+      - [Search Engine Optimization (Open Graph / Meta Tags / Unhead / HTML Semantics):](#search-engine-optimization-open-graph--meta-tags--unhead--html-semantics)
+      - [Page Optimization:](#page-optimization)
+      - [Code and project cleanliness:](#code-and-project-cleanliness)
+      - [Miscellaneous:](#miscellaneous)
     - [:mountain\_bicyclist: Continued development](#mountain_bicyclist-continued-development)
     - [:cake: Acknowledgements \& Useful resources](#cake-acknowledgements--useful-resources)
   - [Author](#author)
@@ -60,7 +69,7 @@ You can find a live deployment of this project [right here!](https://e-commerce-
 
 ### :bulb: I learned how to
 
-Vue Router:
+#### Vue Router:
 
 - Use route parameters and props to create routes and render product pages dynamically, irrespective of the shop's catalog size
 - Catch if customers have entered a wrong route or a missing product ID and forward them to the 404 page
@@ -69,7 +78,7 @@ Vue Router:
 - Adjust the scrolling behavior to reset the view to the page top when visiting a route
 - Run logic, such as overwriting metadata, before entering a new route
   
-State management (Vuex / Pinia / Vueuse):
+#### State management (Vuex / Pinia / Vueuse):
 
 In order to use state more efficiently without prop drilling, mostly for the shopping cart and checkout form, I looked into using Vuex to have a centralized state storage. After learning and playing around with Vuex, I noticed that using Vuex with Typescript is quite cumbersome, and I can't use v-model directly to alter form state. After some research, I found Pinia, which is not only type safe but also allows using Vue's v-model directly on store data!
 
@@ -77,7 +86,7 @@ In order to use state more efficiently without prop drilling, mostly for the sho
 - Catch and validate form data with reactive store functions
 - Implement a reload persistent shopping cart in local storage with Vueuse useStorage within Pinia
 
-Typescript:
+#### Typescript:
 
 Although my use of TypeScript is at times "patchy", it has helped me a lot to find problems before they happened when it comes to passing props for components and using Pinia store functions with product data.
 
@@ -85,7 +94,7 @@ Although my use of TypeScript is at times "patchy", it has helped me a lot to fi
 - Use typed props and default props for Vue components to ensure the proper data is passed
 - Enforce proper types for newly added shop products
 
-Tailwind:
+#### Tailwind:
 
 This project has been a great opportunity to further practice responsive design for mobile/tablet/desktop.
 
@@ -95,20 +104,20 @@ This project has been a great opportunity to further practice responsive design 
 - Use flex basis to adjust space taken up by element
 - Use viewport sizes for responsive design 
 
-Cypress Testing:
+#### Cypress Testing:
 
 - Write E2E tests for happy and unhappy customer paths
 - Write isolated Component / Integration tests 
 - Run tests for different viewport sizes
 - Track and mock functions with spies and stubs
 
-Search Engine Optimization (Open Graph / Meta Tags / Unhead / HTML Semantics):
+#### Search Engine Optimization (Open Graph / Meta Tags / Unhead / HTML Semantics):
 
 - Add and change metadata dynamically within a single page application using Unhead
 - Use Open Graph meta tags to offer customers a more pleasant experience when sharing the app on the web
 - Semantically structure a web page with HTML tags such as header, main, section, article etc.
 
-Page Optimization:
+#### Page Optimization:
 
 - Use Lighthouse Report in Google Chrome to assess app performance
 - Convert images to more web friendly, smaller format WEBP for faster loading times
@@ -116,13 +125,13 @@ Page Optimization:
 - Use Srcset for responsive images (learned, but not yet implemented)
 - Lazy load pages (see Vue Router)
 
-Code and project cleanliness:
+#### Code and project cleanliness:
 
 - Lint with ESLint
 - Format with Prettier in combination with the TailwindCSS plugin to sort HTML classes
 - Organize directories properly for a "bigger" project
 
-Miscellaneous:
+#### Miscellaneous:
 
 - Disable background scrolling, such as when the shopping cart or purchase success banner are visible, using JavaScript
 - Adjust scroll bar styling
