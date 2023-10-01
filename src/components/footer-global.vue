@@ -68,13 +68,13 @@ import instagramIcon from '/icons/instagram.svg'
 				</p>
 				<nav class="flex flex-row gap-4 md:self-end">
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img class="aspect-square h-6" :src="facebookIcon" alt="" />
+						<img loading="lazy" class="aspect-square h-6" :src="facebookIcon" alt="" />
 					</a>
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img class="aspect-square h-6" :src="twitterIcon" alt="" />
+						<img loading="lazy" class="aspect-square h-6" :src="twitterIcon" alt="" />
 					</a>
 					<a class="transition duration-300 hover:-translate-y-0.5" href="">
-						<img class="aspect-square h-6" :src="instagramIcon" alt="" />
+						<img loading="lazy" class="aspect-square h-6" :src="instagramIcon" alt="" />
 					</a>
 				</nav>
 			</div>

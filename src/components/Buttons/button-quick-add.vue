@@ -9,6 +9,7 @@ import cartIcon from '/icons/cart-icon.svg'
 		data-test="button-quick-add"
 	>
 		<img
+			loading="lazy"
 			class="aspect-square h-6 invert active:translate-y-0.5"
 			:src="cartIcon"
 			alt=""

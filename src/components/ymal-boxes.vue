@@ -33,7 +33,7 @@ onBeforeMount(() => {
 					:to="{ name: item.category, params: { id: item.id } }"
 					class="overflow-hidden rounded"
 				>
-					<img class="object-center" :src="item.src" alt="" />
+					<img class="object-center" :src="item.src" alt="" loading="lazy" />
 				</router-link>
 				<h3 class="text-center font-Manrope text-2xl font-semibold text-black">
 					{{ item.header }} <br class="hidden lg:inline" />

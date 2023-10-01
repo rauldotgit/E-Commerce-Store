@@ -18,6 +18,7 @@ const props = defineProps<{
 			:class="props.imgClass"
 			:src="props.src"
 			:alt="`${props.category} category box image`"
+			loading="lazy"
 		/>
 		<div
 			class="col-span-full row-span-2 row-start-2 rounded-lg bg-k-grey duration-300 group-hover:translate-y-1"

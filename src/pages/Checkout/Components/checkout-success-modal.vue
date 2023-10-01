@@ -76,6 +76,7 @@ onBeforeUnmount(() => {
 								class="aspect-square h-24"
 								:src="cartStore.getFirstItem.product.src"
 								alt=""
+								loading="lazy"
 							/>
 							<div class="ml-3 flex flex-col items-start justify-center">
 								<p class="text-lg font-bold text-black">

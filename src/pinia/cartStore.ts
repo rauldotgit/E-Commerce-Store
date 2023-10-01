@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { product } from '../data/product-types.ts'
+import { useStorage } from '@vueuse/core'
 
 interface cartItem {
 	product: product
@@ -12,7 +13,7 @@ interface cart {
 
 export const useCartStore = defineStore('cart', {
 	state: () => ({
-		cart: {} as cart,
+		cart: useStorage('cart', {} as cart),
 		showCart: false,
 		showQuickAdd: true,
 		shipping: 50,
@@ -61,7 +62,7 @@ export const useCartStore = defineStore('cart', {
 		removeFromCart(item: product) {
 			const itemKey = item.category + item.id + ''
 			if (itemKey in this.cart) {
-				if (this.cart[itemKey].amount > 0) {
+				if (this.cart[itemKey].amount > 1) {
 					this.cart[itemKey].amount = this.cart[itemKey].amount - 1
 				} else {
 					delete this.cart[itemKey]
