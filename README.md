@@ -10,7 +10,7 @@
     - [:link: Links](#link-links)
   - [My process](#my-process)
     - [:wrench: Built with](#wrench-built-with)
-    - [:bulb: What I learned](#bulb-what-i-learned)
+    - [:bulb: What I've learned](#bulb-what-ive-learned)
       - [Vue Router](#vue-router)
       - [State management (Vuex / Pinia / Vueuse)](#state-management-vuex--pinia--vueuse)
       - [Typescript](#typescript)
@@ -67,7 +67,7 @@ You can find a live deployment of this project [right here!](https://e-commerce-
 - [Asana](https://app.asana.com/) - For project management
 - HTML5
 
-### :bulb: What I learned
+### :bulb: What I've learned
 
 #### Vue Router
 
